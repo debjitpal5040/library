@@ -1,0 +1,172 @@
+#background{
+    min-height: 1050px;
+    width: 100%;
+   
+}
+#top{
+    height: 35px;
+    width: 100%;
+    background:#140453;
+   line-height: 35px;
+   padding: 0px 20px 9px 100px;
+   box-sizing: border-box;
+    word-spacing:10px ;
+    
+}
+#menu{
+    height: 65px;
+    width: 100%;
+    background:rgb(178, 26, 186);
+   
+}
+#logo{
+    height: 65px;
+    width: 40%;
+    background:rgb(179, 52, 145);
+    text-align: center;
+    line-height: 65px;
+    font-size: 40px;
+    float: left;
+}
+#menu1{
+    height: 65px;
+    width: 60%;
+    background:rgb(114, 218, 189);
+    float: left;
+    
+}
+#menu1 UL{
+    list-style: none;
+    padding-left: 200px;
+    box-sizing: border-box;
+    
+}
+#menu1 LI{
+    height: 45px;
+    width: 130px;
+  
+    text-align: center ; 
+    display: inline-block; 
+    line-height: 45px;
+    transform: translateY(-5px);
+    color: rgb(31, 33, 166);
+    font-size: 20px;
+   
+}
+#menu1 LI:hover{
+    background: #ad1687;  
+    color: white; 
+    transition: all ease 1s;
+    border-radius: 3px;
+}
+
+#slider{
+    height:640px;
+    width: 100%;
+    background:url(shayakpic.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    animation-name:slider;
+    animation-duration: 20s;
+    animation-iteration-count:infinite ;
+   animation-delay: 3s;
+}
+
+/*@keyframes slider{
+   
+    from{
+        background:url(shayakpic.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    to{
+        background:url(shayakpic.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+    } 
+}*/
+
+#x{
+    height:640px;
+    width: 40%;
+    background:rgba(168, 34, 208, 0.4); 
+    float: left;
+    font-size: 41PX;
+    color: white;
+    text-align: center;
+    padding-top: 250px;
+    box-sizing: border-box;
+}
+#y{
+    height:640px;
+    width: 30%;
+    background:rgba(172, 125, 125, 0.37); 
+    float: left;
+    
+    
+}
+#z{
+    height:640px;
+    width: 30%;
+    background:rgba(205, 73, 12, 0.4); 
+    float: left;
+}
+#l{
+    height:450px;
+    width: 80%;
+    background:rgba(215, 15, 41, 0.6); 
+    float: left; 
+    margin: 90px;
+    border-radius: 7px ;
+    
+}
+#l:hover{
+    background:linear-gradient(45deg,rgba(177, 108, 40, 0.6),rgba(255,255,255, .6));
+}
+
+#r{
+    height:450px;
+    width: 80%;
+    background:rgba(44,122,214, .6); 
+    float: left;
+    margin: 90px auto;
+    border-radius: 7px ;
+
+}
+#r:hover{
+    background:linear-gradient(45deg,rgba(177, 40, 138, 0.6),rgba(255,255,255, .6));
+}
+#student{
+    margin:50px 50px;
+    color:rgb(237, 243, 240);
+    
+}
+#Management{
+    margin:50px 50px;
+    color:rgb(242, 234, 234);
+}
+.t{
+    height: 40px;
+    width: 100%;
+    border: 2px solid rgb(220, 37, 147);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    
+}
+#down{
+    height: 300px;
+    width: 100%;
+    margin-top: 10px;
+    background:#af16ce;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+}
+.footer{
+    height: 20px;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+}
