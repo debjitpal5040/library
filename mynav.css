@@ -8,7 +8,7 @@ nav div a {
 
 .nav-link:hover {
     background-color: hsl(222, 62%, 32%);
-    transition: background-color 1s;
+    transition: background-color 0.5s;
     border-radius: 10px;
     font-size: 15px;
 }
@@ -32,7 +32,7 @@ nav div a {
 
 .btn:hover {
     background-color: green !important;
-    transition: background-color 1s;
+    transition: background-color 0.5s;
     color: hsl(196, 100%, 97%) !important;
     font-size: 15px !important;
 }
@@ -44,13 +44,12 @@ nav div a {
 
 .dropdown-item:hover {
     background-color: hsl(222, 62%, 32%) !important;
-    transition: background-color 1s !important;
+    transition: background-color 0.5s !important;
     border-radius: 10px !important;
     font-size: 15px !important;
-    background-size: 0px 10px !important;
 }
 
 .dropdown-item {
     width: 100px !important;
     height: 32px !important;
-  }
+}
