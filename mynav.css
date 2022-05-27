@@ -41,3 +41,16 @@ nav div a {
     color: hsl(196, 100%, 97%) !important;
     border-color: green !important;
 }
+
+.dropdown-item:hover {
+    background-color: hsl(222, 62%, 32%) !important;
+    transition: background-color 1s !important;
+    border-radius: 10px !important;
+    font-size: 15px !important;
+    background-size: 0px 10px !important;
+}
+
+.dropdown-item {
+    width: 100px !important;
+    height: 32px !important;
+  }
