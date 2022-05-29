@@ -7,4 +7,5 @@ Welcome to the official website development repository of Dakshineswar Shayak Li
 
 
 
-<img width="1440" alt="Screenshot 2022-05-29 at 09 56 48" src="https://user-images.githubusercontent.com/76846542/170852224-5eace7ec-e9dc-4bb0-826e-48aba7239ba7.png">
+
+<img width="1440" alt="Screenshot 2022-05-29 at 17 54 21" src="https://user-images.githubusercontent.com/76846542/170868072-db136783-d461-4cee-b192-dffff49d5b67.png">
