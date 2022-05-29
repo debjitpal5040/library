@@ -1,3 +1,6 @@
+.carousel-caption{
+    opacity: 0.7;
+}
 .carousel-caption:hover {
     background-color: hsl(222, 62%, 32%) !important;
     transition: background-color 0.5s !important;
