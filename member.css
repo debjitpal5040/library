@@ -118,6 +118,15 @@ form.sign-in-form {
   font-weight: 500;
 }
 
+.forgot-password {
+  text-decoration: none;
+  color: #5995fd;
+}
+
+.forgot-password {
+  cursor: pointer;
+}
+
 .social-text {
   padding: 0.7rem 0;
   font-size: 1rem;
