@@ -1,6 +1,12 @@
-.footer{
+.footer {
     padding-top: 20px;
 }
-.col-md-3{
+.col-md-3 {
     text-align: center;
+}
+a:link {
+    color: whitesmoke;
+}
+a:link:hover{
+    color: aqua;
 }
