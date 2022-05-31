@@ -11,16 +11,12 @@ nav div a {
 }
 
 .nav-link:hover {
+    color: aqua !important;
     background-color: hsl(222, 62%, 32%);
     transition: background-color 0.5s;
     border-radius: 10px;
     font-size: 15px;
-}
-
-.dropdown-item:hover {
-    background-color: hsl(320, 62%, 32%);
-    border-radius: 10px;
-    font-size: 15px;
+    transition: color 0.5s;
 }
 
 .navbar-toggler-icon {
@@ -35,10 +31,11 @@ nav div a {
 }
 
 .btn:hover {
+    color: aqua !important;
     background-color: green !important;
     transition: background-color 0.5s;
-    color: hsl(196, 100%, 97%) !important;
     font-size: 15px !important;
+    transition: color 0.5s;
 }
 
 .btn {
@@ -47,10 +44,12 @@ nav div a {
 }
 
 .dropdown-item:hover {
+    color: aqua !important;
     background-color: hsl(222, 62%, 32%) !important;
     transition: background-color 0.5s !important;
     border-radius: 10px !important;
     font-size: 15px !important;
+    transition: color 0.5s;
 }
 
 .dropdown-item {
