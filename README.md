@@ -3,9 +3,10 @@ Welcome to the official website development repository of Dakshineswar Shayak Li
 
     Team :- Dakshineswar Shayak Library
 <b><i>Made via Bootstrap CSS framework</i></b>
-### Early preview of our website is now available ❤️‍🔥.
+### A preview of our website is now available ❤️‍🔥.
 
 
 
 
-<img width="1440" alt="Screenshot 2022-05-29 at 17 54 21" src="https://user-images.githubusercontent.com/76846542/170868072-db136783-d461-4cee-b192-dffff49d5b67.png">
+![Web capture_31-5-2022_211145_127 0 0 1](https://user-images.githubusercontent.com/76846542/171217866-d74952e3-df31-4705-9097-5ea6e44857e4.jpeg)
+
