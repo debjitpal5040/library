@@ -7,6 +7,4 @@ Welcome to the official website development repository of Dakshineswar Shayak Li
 
 
 
-
-![Web capture_31-5-2022_211145_127 0 0 1](https://user-images.githubusercontent.com/76846542/171217866-d74952e3-df31-4705-9097-5ea6e44857e4.jpeg)
-
+![Web capture_1-6-2022_12360_127 0 0 1](https://user-images.githubusercontent.com/76846542/171347211-fd050a0f-d7db-4336-8cc2-3008d6f2c084.jpeg)
