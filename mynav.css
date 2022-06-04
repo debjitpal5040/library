@@ -60,11 +60,14 @@ nav div a {
     border-radius: 10px !important;
     font-size: 15px !important;
     transition: color 0.5s;
+    transform: scale(1.2);
+    transition: transform 0.5s;
+    text-align: center;
 }
 
 .dropdown-item {
-    width: 100px !important;
-    height: 32px !important;
+    width: 90px !important;
+    text-align: center;
 }
 .img {
     width: 40px;
@@ -73,5 +76,9 @@ nav div a {
 }
 .img:hover {
     transform: scale(1.2);
+    transition: transform 0.5s;
+}
+.imag:hover{
+    transform: scale(1.1);
     transition: transform 0.5s;
 }
