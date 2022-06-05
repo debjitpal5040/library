@@ -6,7 +6,7 @@ nav {
     font-weight: bolder !important;
 }
 .navbar-brand:hover {
-    color: yellow !important;
+    color: aqua !important;
     transition: color 0.5s;
     transform: scale(1.1);
     transition: transform 0.5s;
