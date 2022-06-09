@@ -17,7 +17,7 @@ nav div a {
     margin-left: 2rem;
 }
 .nav-link{
-    color:white;
+    color:white !important;
 }
 .nav-link:hover {
     color: aqua !important;
@@ -71,7 +71,7 @@ nav div a {
 .dropdown-item {
     width: 90px !important;
     text-align: center;
-    color: white;
+    color: white !important;
 }
 #navbarDropdown{
     color: white;
