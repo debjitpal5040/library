@@ -11,17 +11,10 @@ input {
   font-family: "Poppins", sans-serif;
 }
 
-.nav-link:hover {
-  background-color: #4481eb;
-  transition: background-color 0.5s;
-  border-radius: 10px;
-  font-size: 15px;
-}
-
 .container {
   position: relative;
   width: 100% !important;
-  background-color: #fff;
+  background-color: white;
   min-height: 100vh;
   overflow: hidden;
   margin: 0 !important;
@@ -85,7 +78,7 @@ form.sign-in-form {
 .input-field {
   max-width: 380px;
   width: 100%;
-  background-color: hsl(196, 100%, 97%);
+  background-color: white;
   margin: 10px 0;
   height: 55px;
   border-radius: 55px;
@@ -98,7 +91,7 @@ form.sign-in-form {
 .input-field i {
   text-align: center;
   line-height: 55px;
-  color: #5995fd;
+  color: navy;
   transition: 0.5s;
   font-size: 1.1rem;
 }
@@ -114,16 +107,13 @@ form.sign-in-form {
 }
 
 .input-field input::placeholder {
-  color: #5995fd;
+  color: navy;
   font-weight: 500;
 }
 
 .forgot-password {
   text-decoration: none;
-  color: #5995fd;
-}
-
-.forgot-password {
+  color: navy;
   cursor: pointer;
 }
 
@@ -153,19 +143,18 @@ form.sign-in-form {
 }
 
 .social-icon:hover {
-  color: #4481eb;
-  border-color: #4481eb;
+  color: navy;
+  border-color: navy;
 }
 
 .btn-body {
   width: 150px;
   background-color: hsl(205, 80%, 34%);
-  /* #5995fd*/
   border: none;
   outline: none;
   height: 49px;
   border-radius: 49px;
-  color: hsl(196, 100%, 97%);
+  color: white;
   text-transform: uppercase;
   font-weight: 600;
   margin: 10px 0;
@@ -174,7 +163,7 @@ form.sign-in-form {
 }
 
 .btn-body:hover {
-  background-color: #4d84e2 !important;
+  background-color: navy !important;
 }
 .panels-container {
   position: absolute;
@@ -230,7 +219,7 @@ form.sign-in-form {
 }
 
 .panel .content {
-  color: hsl(196, 100%, 97%);
+  color: white;
   transition: transform 0.9s ease-in-out;
   transition-delay: 0.6s;
 }
