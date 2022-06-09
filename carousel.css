@@ -1,7 +1,10 @@
 .carousel-caption{
-    opacity: 0.7;
+    opacity: 0.8;
+    color:white; 
+    background-color:navy; 
+    border-radius: 20px;
 }
 .carousel-caption:hover {
-    background-color: hsl(222, 62%, 32%) !important;
+    background-color: hsl(205, 80%, 34%) !important;
     transition: background-color 0.5s !important;
 }

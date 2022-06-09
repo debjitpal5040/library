@@ -1,9 +1,9 @@
 .footer {
     padding-top: 20px;
     padding-bottom: 10px;
+    background-color:hsl(205, 80%, 34%);
 }
 .col-md-3 {
-    /* text-align: center; */
     margin-left: 20px;
     margin-right: -5px;
     margin-bottom: 20px;
