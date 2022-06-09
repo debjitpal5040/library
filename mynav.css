@@ -4,6 +4,7 @@ nav {
 
 .navbar-brand {
     font-weight: bolder !important;
+    color: white;
 }
 .navbar-brand:hover {
     color: aqua !important;
@@ -15,7 +16,9 @@ nav {
 nav div a {
     margin-left: 2rem;
 }
-
+.nav-link{
+    color:white;
+}
 .nav-link:hover {
     color: aqua !important;
     transition: color 0.5s;
@@ -68,6 +71,10 @@ nav div a {
 .dropdown-item {
     width: 90px !important;
     text-align: center;
+    color: white;
+}
+#navbarDropdown{
+    color: white;
 }
 .img {
     width: 40px;
