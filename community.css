@@ -26,3 +26,78 @@ body {
     transform: scale(1.1);
     transition: transform 0.5s;
 }
+.form{
+    text-align: center;
+}
+.contact{
+    text-align: center;
+    color: black;
+    margin: 30px;
+    font-family: cursive;
+}
+.contact:hover{
+    color: white;
+    background-color: navy;
+    transition: color 0.5s;
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+/* Form */
+label{
+    color: white;
+    display: inline-block;
+    text-align: right;
+    width: 100px;
+}
+label[for="message"]{
+    margin-left: 100px;
+}
+label[for="query"]{
+    margin-left: 10px;
+}
+input[type = text],[type = email], [type = tel], select {
+    background-color:black; 
+    width: 18%;
+    padding: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px !important;
+    color: white;
+}
+textarea{
+    background-color:black;
+    width: 25%;
+    height: 130px;
+    padding: 7px;
+    margin-left: 10px !important;
+    margin-bottom: 10px;
+    color: white;
+    resize: horizontal;
+}
+input:focus, textarea:focus, select:focus {
+    background-color: navy;
+} 
+input[type=reset] {
+    padding: 10px 10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+input[type=reset]:hover {
+    background-color: navy;
+}
+input[type=submit] {
+    padding:10px 8px; 
+    background-color: green; 
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+input[type=submit]:hover {
+    background-color: navy;
+}
