@@ -5,6 +5,8 @@ nav {
 .navbar-brand {
     font-weight: bolder !important;
     color: white;
+    font-family: cursive;
+    font-size: 22px !important;
 }
 .navbar-brand:hover {
     color: aqua !important;
