@@ -1,10 +1,11 @@
 # Website
 
-Welcome to the official website development repository of Dakshineswar Shayak Library. Please maintain the repository in a way that makes it easy to update the website. Feel free to ask questions and report bugs. You are welcome to contribute to the website development.
+Welcome to the official website development repository of Dakshineswar Shayak Library. This repository is used to develop the website of the library. This is an ongoing project developed by a small subset of library members who are just college students with some knowledge in website development. This is currently a personal project and as per from the request of the senior members of our library we are developing this and we are not affiliated with any other company. We are just a bunch of college students who are working on this project to boost our local library's online presence and to make it more user friendly. We are also working on a project to make the library more accessible to everyone. 
 
     Team :- Dakshineswar Shayak Library
+    Developers :- @debjitpal5040 @Soumabha-Banerjee @airlive11
 
-<b><i>Made via Bootstrap CSS framework</i></b>
+<b><i>Designed via Bootstrap CSS framework</i></b>
 
 ### A preview of our website is now available ❤️‍🔥.
 
