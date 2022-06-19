@@ -34,13 +34,14 @@ a:link:hover{
     color: navy !important;
     background-color: white !important;
     position: fixed;
-    bottom: 60px;
+    bottom: 20px;
     right: 40px;
     width: 120px;
     height: 40px;
     font-size: 15px;
     padding-left: 0px;
     padding-right: 0px;
+    z-index: 9999;
 }
 #btn-back-to-top:hover {
     transform: scale(1);
