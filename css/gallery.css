@@ -9,7 +9,7 @@ body {
 }
 .gal:hover{
     color: white;
-    background-color: navy;
+    cursor: pointer;
     transition: color 0.5s;
     transform: scale(1.1);
     transition: transform 0.5s;
@@ -38,7 +38,6 @@ body {
 .imgcap:hover{
     cursor: pointer;
     color: white;
-    background-color: navy;
     transition: color 0.5s;
     transform: scale(1.1);
     transition: transform 0.5s;

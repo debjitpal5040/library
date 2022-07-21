@@ -15,9 +15,10 @@ body {
   margin: 30px;
   font-family: cursive;
 }
+
 .featured:hover {
   color: white;
-  background-color: navy;
+  cursor: pointer;
   transition: color 0.5s;
   transform: scale(1.1);
   transition: transform 0.5s;
@@ -102,10 +103,24 @@ body {
   opacity: 1;
   transform: scale(1.1);
 }
-.imag {
+
+.ima {
   height: 500px;
   width: 400px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
+input, select {
+  background-color:black; 
+  width: 15%;
+  padding: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px !important;
+  color: white;
+}
+
+input:focus, select:focus {
+  background-color: navy;
+} 

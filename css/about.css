@@ -1,15 +1,17 @@
 body {
     background-color: hsl(205, 80%, 34%) !important;
 }
+
 .about{
     text-align: center;
     color: black;
     margin: 30px;
     font-family: cursive;
 }
+
 .about:hover{
     color: white;
-    background-color: navy;
+    cursor: pointer;
     transition: color 0.5s;
     transform: scale(1.1);
     transition: transform 0.5s;

@@ -9,7 +9,7 @@ body {
 }
 .notice:hover{
     color: white;
-    background-color: navy;
+    cursor: pointer;
     transition: color 0.5s;
     transform: scale(1.1);
     transition: transform 0.5s;
@@ -37,7 +37,7 @@ body {
 }
 .contact:hover{
     color: white;
-    background-color: navy;
+    cursor: pointer;
     transition: color 0.5s;
     transform: scale(1.1);
     transition: transform 0.5s;
