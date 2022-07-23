@@ -16,3 +16,43 @@ body {
     transform: scale(1.1);
     transition: transform 0.5s;
 }
+
+.desc{
+    text-align: center;
+    color: white; 
+}
+
+.card{
+    background-color: lightsteelblue;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+    background-color: hsl(205, 80%, 34%);
+}
+
+.card-body {
+    position: relative;
+    bottom: 25px;
+    text-align: center;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.card-title{
+    font-size: 20px;
+    color: navy;
+}
+
+.iml:hover, .imr:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
