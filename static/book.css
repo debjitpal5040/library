@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box !important;
+}
+body {
+  background-color: hsl(205, 80%, 34%) !important;
+}
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+.featured {
+  text-align: center;
+  color: black;
+  margin: 30px;
+  font-family: cursive;
+}
+
+.featured:hover {
+  color: white;
+  cursor: pointer;
+  transition: color 0.5s;
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: white;
+  border-radius: 90%;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66% !important;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.5;
+  height: 300px;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.ima {
+  height: 500px;
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input, select {
+  background-color:black; 
+  width: 15%;
+  padding: 5px;
+  margin-left: 10px;
+  margin-bottom: 10px !important;
+  color: white;
+}
+
+input:focus, select:focus {
+  background-color: navy;
+} 

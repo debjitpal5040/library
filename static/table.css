@@ -1,0 +1,35 @@
+.tab{
+    text-align: center;
+}
+
+label{
+    color: white;
+    display: inline-block;
+    text-align: right;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+    max-height: 600px;
+    overflow: auto;
+}
+
+th, td {
+    text-align: center !important;
+    padding: 8px;
+}
+
+th {
+    background-color: black !important;
+    color: white;    
+}
+
+tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+tr:nth-child(odd) {
+    background-color: green;
+}

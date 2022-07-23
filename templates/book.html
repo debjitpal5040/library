@@ -1,0 +1,3560 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+  <head>
+    <!--------- Meta Tags --------->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--------- External CSS files --------->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'mynav.css' %}">
+    <link rel="stylesheet" href="{% static 'book.css' %}">
+    <link rel="stylesheet" href="{% static 'footer.css' %}">
+    <link rel="stylesheet" href="{% static 'table.css' %}">
+    <!--------- Favicon --------->
+    <link rel="icon" type="image/png" href="media/logo.png">
+    <!--------- Font Awesome CSS --------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--------- BootStrap CSS --------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Dakshineswar Shayak Library</title>
+  </head>
+
+  <body>
+    <!--------- NavBar --------->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+        <div>
+          <img class="img" src="media/logo.png" alt="logo">
+        </div>
+        <a class="navbar-brand" href="index"> Dakshineswar Shayak Library</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">Menu</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="book">Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="community">Community</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Login/Register
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:hsl(205, 80%, 34%)">
+                <li><a class="dropdown-item" href="member">Member</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="admin">Admin</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search" method="get" action="http://www.google.com/search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!--------- Body For Home --------->
+
+    <div class="featured">
+      <h1>Featured Books</h1>
+    </div>
+    <div class="container">
+
+      <!--------- Full-width images with number text --------->
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img class="ima" src="media/ai.jpg">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img class="ima" src="media/clrs.jpeg">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img class="ima" src="media/dbms.jpg">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img class="ima" src="media/ds.jpg">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img class="ima" src="media/ml.jpg">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img class="ima" src="media/os.jpg">
+      </div>
+
+      <!--------- Next and previous buttons --------->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <br>
+      <!--------- Image text --------->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+      <br>
+      <!--------- Thumbnail images --------->
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="media/ai.jpg" style="width:100%" onclick="currentSlide(1)"
+            alt="Artificial Intelligence">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="media/clrs.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Algorithms">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="media/dbms.jpg" style="width:100%" onclick="currentSlide(3)"
+            alt="Database Management System">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="media/ds.jpg" style="width:100%" onclick="currentSlide(4)"
+            alt="Data Structures">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="media/ml.jpg" style="width:100%" onclick="currentSlide(5)"
+            alt="Machine Learning">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="media/os.jpg" style="width:100%" onclick="currentSlide(6)"
+            alt="Operating System">
+        </div>
+      </div>
+    </div><br>
+    <br>
+    <div class="featured">
+      <h1>Catalog</h1>
+    </div>
+    <div class="tab">
+      <label for="select">
+        Select a subject to view it's catalog:
+      </label>
+      <select name="select" id="select" onchange="changeSelection()">
+        <!--Added the onchange Function -->
+        <option value="0">Please Select</option>
+        <option value="1">Botany</option>
+        <option value="2">Chemistry</option>
+        <option value="3">Computer Science</option>
+        <option value="4">Economics</option>
+        <option value="5">Mathematics</option>
+        <option value="6">Zoology</option>
+      </select><br>
+      <label for="search">
+        Search for a book from the catalog:
+      </label>
+      <input type="text" id="search" placeholder="Search by Book or Author">
+    </div>
+    <br>
+
+    <!--------- Table for Catalog --------->
+
+    <table id="t1">
+      <tr>
+        <th title="Field #1">SL. NO.</th>
+        <th title="Field #2">CALL NO.</th>
+        <th title="Field #3">TITLE</th>
+        <th title="Field #4">AUTHOR (S)</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>BO001</td>
+        <td>A Class Book Of Fungi</td>
+        <td>G. L. Chopra</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>BO002</td>
+        <td>A Text Book Of Biotechnology</td>
+        <td>R. C. Dubey</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>BO003</td>
+        <td>A Text Book Of Botany</td>
+        <td>K. Bhattacharya, G. Hait, A. K. Ghosh</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>BO004</td>
+        <td>A Text Book Of Botany (Vol-1)</td>
+        <td>Hail, Bhattacharya, Ghosh</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>BO005</td>
+        <td>A Text Book Of Botany (Vol-2)</td>
+        <td>Hail, Bhattacharya, Ghosh</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>BO006</td>
+        <td>A Text Book Of Botany, Angiosperm</td>
+        <td>B. P. Pandey</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>BO007</td>
+        <td>A Text Book Of On Algae</td>
+        <td>H. D. Kumar, H. N. Singh</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>BO008</td>
+        <td>A Text Book Of Plant Ecology</td>
+        <td>R. S. Shukla, P. S. Chandal</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>BO009</td>
+        <td>A Text Book Of Plant Physiology, Biochemistry And Biotechnology</td>
+        <td>S. K. Verma, Mohit Verma</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>BO010</td>
+        <td>An Introduction To Bryophyte (Diversity), Development And Differentiation)</td>
+        <td>A. Rashid</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>BO011</td>
+        <td>An Introduction To The Embryology Of Angiosperms</td>
+        <td>P. Maheshwari</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>BO012</td>
+        <td>Biotechnology Expanding Horizons</td>
+        <td>B. D. Singh</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>BO013</td>
+        <td>Botany For Degree Students (Fungi)</td>
+        <td>B. R. Vasishta, A. K. Singh</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>BO014</td>
+        <td>Botany For Degree Students (Gymnosperms)</td>
+        <td>P. C. Vashishta</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>BO015</td>
+        <td>Botany For Degree Students (Pteridophyta (Vascular Cryptogams))</td>
+        <td>P.C. Vashishta, A. K. Singh, Anil Kumar</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>BO016</td>
+        <td>Botany For Degree Studies (Bryophyte)</td>
+        <td>B. R. Vashishta</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>BO017</td>
+        <td>Botany Of Degree Students (Gymnosperms)</td>
+        <td>P. C. Vashishta</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>BO018</td>
+        <td>Cell And Molecular Biology</td>
+        <td>P. K. Gupta</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>BO019</td>
+        <td>Cell Biology</td>
+        <td>Satyesh Chandra Roy, Kalyan Kumar De</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>BO020</td>
+        <td>College Botany</td>
+        <td>Sautra, Chatterji, Das</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>BO021</td>
+        <td>College Botany (Vol-II)</td>
+        <td>Ganguly, Kar</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td>BO022</td>
+        <td>College Botany (Vol-I)</td>
+        <td>H. C. Ganguly, K. S. Das, C. Dutta</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td>BO023</td>
+        <td>College Botany Practical (Vol-I)</td>
+        <td>Ganguly, Das, Dutta</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td>BO024</td>
+        <td>College Botany Practical (Vol-II)</td>
+        <td>Sautra, Chatterji, Das</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>BO025</td>
+        <td>Cryptogamic Botany (Algae And Fungi) (Vol-I)</td>
+        <td>Gilbert M. Smith</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td>BO026</td>
+        <td>Ecology And Environment</td>
+        <td>P. D. Sharma</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td>BO027</td>
+        <td>Elements Of Biochemistry</td>
+        <td>H. S. Srivastava</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td>BO028</td>
+        <td>Essential Of Botany (Vol-I)</td>
+        <td>Dilip Gupta</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td>BO029</td>
+        <td>Focus On College Practical Botany (Vol-II)</td>
+        <td>Dr. P. Maji</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td>BO030</td>
+        <td>Fundamental Of Plant Physiology</td>
+        <td>Dr. V. K. Jain</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td>BO031</td>
+        <td>Fundamentals Of Biochemistry</td>
+        <td>J. L. Jain, Sunjay Jain, Nitin Jain</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td>BO032</td>
+        <td>Fundamentals Of Plant Physiology</td>
+        <td>Dr. V. K. Jain</td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td>BO033</td>
+        <td>General Microbiology</td>
+        <td>Stainer, Ingraham, Wheelin, Painter</td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td>BO034</td>
+        <td>Genetics</td>
+        <td>P. K. Gupta</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td>BO035</td>
+        <td>Genetics</td>
+        <td>P. S. Verma, V. K. Agarwal</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td>BO036</td>
+        <td>Introduction Of Principles Of Plant Pathology (Fourth Edition)</td>
+        <td>R. S. Singh</td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td>BO037</td>
+        <td>Introduction To Plant Population Ecology</td>
+        <td>Silvertown</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td>BO038</td>
+        <td>Microbiology</td>
+        <td>Michael J. Pelcyar, E.C.S. Chan, Noel R. Krieg</td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td>BO039</td>
+        <td>Phycology (Edition-3) (Xerox Book)</td>
+        <td>Robert Edward Lee</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td>BO040</td>
+        <td>Plant Anatomy</td>
+        <td>B. P. Pandey</td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td>BO041</td>
+        <td>Plant Biotechnology</td>
+        <td>K. G. Ramawat</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td>BO042</td>
+        <td>Plant Breeding</td>
+        <td>B. D. Singh</td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td>BO043</td>
+        <td>Plant Breeding</td>
+        <td>Darbeswar Roy</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td>BO044</td>
+        <td>Plant Breeding, Biometry, Biotechnology</td>
+        <td>Dipak Kr. Kar, Soma Halder</td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td>BO045</td>
+        <td>Plant Pathology (Pathogen And Plant Disease)</td>
+        <td>B. P. Pandey</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td>BO046</td>
+        <td>Plant Physiology</td>
+        <td>S. Mukherji, A. K. Ghosh</td>
+      </tr>
+      <tr>
+        <td>47</td>
+        <td>BO047</td>
+        <td>Plant Physiology</td>
+        <td>H. S. Srivastava</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td>BO048</td>
+        <td>Plant Physiology</td>
+        <td>V. K. Jain</td>
+      </tr>
+      <tr>
+        <td>49</td>
+        <td>BO049</td>
+        <td>Plant Systematic Theory And Practice (3rd Edition)</td>
+        <td>Gurcharan Singh</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td>BO050</td>
+        <td>Studies In Botany</td>
+        <td>D. Mitra, J. Guha, S. K. Chowdhury</td>
+      </tr>
+      <tr>
+        <td>51</td>
+        <td>BO051</td>
+        <td>Studies In Botany (Vol-II)</td>
+        <td>Mitra, Guha, Choudhuri</td>
+      </tr>
+      <tr>
+        <td>52</td>
+        <td>BO052</td>
+        <td>Taxonomy Of Angiosperms</td>
+        <td>Shukla, Mishra</td>
+      </tr>
+      <tr>
+        <td>53</td>
+        <td>BO053</td>
+        <td>Taxonomy Of Angiosperms</td>
+        <td>B. P. Pandey</td>
+      </tr>
+      <tr>
+        <td>54</td>
+        <td>BO054</td>
+        <td>Text Book Of Algae</td>
+        <td>O. P. Sharma</td>
+      </tr>
+      <tr>
+        <td>55</td>
+        <td>BO055</td>
+        <td>Text Book Of Fungi</td>
+        <td>O. P. Sharma</td>
+      </tr>
+    </table>
+
+    <table id="t2">
+      <tr>
+        <th title="Field #1">SL. NO.</th>
+        <th title="Field #2">CALL NO.</th>
+        <th title="Field #3">TITLE</th>
+        <th title="Field #4">AUTHOR (S)</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>CH001</td>
+        <td>3000 Solved Problems in Chemistry</td>
+        <td>Daniel E. Goldberg</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>CH002</td>
+        <td>A Guidebook to Mechanism in Organic Chemistry</td>
+        <td>Peter Sykes</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>CH003</td>
+        <td>A Handbook of Practical Chemistry (Vol-I)</td>
+        <td>S. K. Panigrahi</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>CH004</td>
+        <td>A manual of Practical Chemistry</td>
+        <td>R. C. Bhattacharya</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>CH005</td>
+        <td>A Text Book of Organic Chemistry</td>
+        <td>Bahl &amp; Bahl</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>CH006</td>
+        <td>A Text Book of Physical Chemistry</td>
+        <td>A. S. Negi, S. C. Anand</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>CH007</td>
+        <td>A Text Book of Physical Chemistry</td>
+        <td>K. L. Chugh &amp; S. L. Agnish</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>CH008</td>
+        <td>A Text Book of Physical Chemistry (Vol-1)</td>
+        <td>K. L. Kapoor</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>CH009</td>
+        <td>A Text Book of Physical Chemistry (Vol-2)</td>
+        <td>K. L. Kapoor</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>CH010</td>
+        <td>A Text Book of Physical Chemistry (Vol-3)</td>
+        <td>K. L. Kapoor</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>CH011</td>
+        <td>A Text Book of Physical Chemistry (Vol-4)</td>
+        <td>K. L. Kapoor</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>CH012</td>
+        <td>A Text Book of Physical Chemistry (Vol-5)</td>
+        <td>K. L. Kapoor</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>CH013</td>
+        <td>A Textbook of Quantative Inorganic Analysis</td>
+        <td>Arthur I. Vogel</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>CH014</td>
+        <td>Advance Practical Chemistry</td>
+        <td>Subhas C. Das</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>CH015</td>
+        <td>Advanced General Organic Chemistry (a modern approach)</td>
+        <td>Sachin Kr. Ghosh</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>CH016</td>
+        <td>Advanced Inorganic Chemistry</td>
+        <td>F. A. Cotton, G. Wilkinson</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>CH017</td>
+        <td>Advanced Inorganic Chemistry (Part-I)</td>
+        <td>Jerry march</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>CH018</td>
+        <td>Advanced Inorganic Chemistry (Part-II)</td>
+        <td>Jerry march</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>CH019</td>
+        <td>Advanced Organic Reaction Mechanism</td>
+        <td>N. Tewari</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>CH020</td>
+        <td>Advanced Practical Chemistry</td>
+        <td>Subhas C. Das</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>CH021</td>
+        <td>Basic Stereochemistry of Organic Molecules</td>
+        <td>Subrata Sengupta</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td>CH022</td>
+        <td>Biochemistry</td>
+        <td>Debojyoti Das</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td>CH023</td>
+        <td>Biochemistry</td>
+        <td>Lehninger</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td>CH024</td>
+        <td>Biophysical Chemistry Principles &amp; Techniques</td>
+        <td>Upadhay – Upadhay - Nath</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>CH025</td>
+        <td>Biophysics &amp; Biophysical Chemistry</td>
+        <td>Debajyoti Das</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td>CH026</td>
+        <td>C. U. Degree Chemistry</td>
+        <td>Chakraborty &amp; Chakraborty</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td>CH027</td>
+        <td>C. U. Degree Chemistry (Question &amp; Answer)</td>
+        <td>Sarkar &amp; Sarkar</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td>CH028</td>
+        <td>Cell Biology</td>
+        <td>Karp</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td>CH029</td>
+        <td>Concepts &amp; Models of Inorganic Chemistry</td>
+        <td>E. Douglas &amp; H. Mc. Daniel</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td>CH030</td>
+        <td>Concepts of Inorganic Chemistry</td>
+        <td>Douglas, Mcdaniel &amp; Alexander</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td>CH031</td>
+        <td>Concise Inorganic Chemistry</td>
+        <td>J. D. Lee</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td>CH032</td>
+        <td>Degree Chemistry [Question + Answer]</td>
+        <td>Sarkar &amp; Sarkar</td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td>CH033</td>
+        <td>Degree Physical &amp; General Chemistry</td>
+        <td>Aninda Kr. Mondal</td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td>CH034</td>
+        <td>Elementary Inorganic Chemistry</td>
+        <td>K. L. Dutta</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td>CH035</td>
+        <td>Elementary Physical Chemistry</td>
+        <td>Palit</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td>CH036</td>
+        <td>Elementary Practical Organic Chemistry [Part-I]</td>
+        <td>A. I. Vogel</td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td>CH037</td>
+        <td>Elementary Practical Organic Chemistry [Part-II]</td>
+        <td>A. I. Vogel</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td>CH038</td>
+        <td>Elements of Physical Chemistry</td>
+        <td>S. Glastone &amp; D. Lewis</td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td>CH039</td>
+        <td>Elements of Practical Organic Chemistry</td>
+        <td>A. I Vogel</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td>CH040</td>
+        <td>Environmental Chemistry</td>
+        <td>A. K. De</td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td>CH041</td>
+        <td>Essential Trends in Inorganic Chemistry</td>
+        <td>D. M. P. Mingos</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td>CH042</td>
+        <td>Fundamental Concepts of Inorganic Chemistry</td>
+        <td>Esmarch S. Gilreath</td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td>CH043</td>
+        <td>Fundamental Concepts of Inorganic Chemistry (Vol-I)</td>
+        <td>Asim K. das</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td>CH044</td>
+        <td>Fundamental Concepts of Inorganic Chemistry (Vol-II)</td>
+        <td>Asim K. das</td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td>CH045</td>
+        <td>Fundamental Concepts of Inorganic Chemistry (Vol-III)</td>
+        <td>Asim Kr. Das</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td>CH046</td>
+        <td>Fundamental of Molecular Spectroscopy</td>
+        <td>Colin N. Barnwell, Elaine M. Mc Cash</td>
+      </tr>
+      <tr>
+        <td>47</td>
+        <td>CH047</td>
+        <td>Fundamental of Organic Synthesis</td>
+        <td>Ratan Kumar Kar</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td>CH048</td>
+        <td>Fundamentals of Analytical Chemistry</td>
+        <td>SKOOG/ WEST/ HOLLER/CROUCH</td>
+      </tr>
+      <tr>
+        <td>49</td>
+        <td>CH049</td>
+        <td>Fundamentals of Organic Chemistry</td>
+        <td>A. N. Nesmeyanov, N. A. Nesmeyanov</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td>CH050</td>
+        <td>General &amp; Inorganic Chemistry</td>
+        <td>R. Sarkar</td>
+      </tr>
+      <tr>
+        <td>51</td>
+        <td>CH051</td>
+        <td>General &amp; Inorganic Chemistry</td>
+        <td>P.K. Dutta</td>
+      </tr>
+      <tr>
+        <td>52</td>
+        <td>CH052</td>
+        <td>General &amp; Inorganic Chemistry</td>
+        <td>Ramprasad Sarkar</td>
+      </tr>
+      <tr>
+        <td>53</td>
+        <td>CH053</td>
+        <td>General &amp; Inorganic Chemistry</td>
+        <td>S. N. Poddar &amp; S. Ghosh</td>
+      </tr>
+      <tr>
+        <td>54</td>
+        <td>CH054</td>
+        <td>General &amp; Inorganic Chemistry (5th ed.)</td>
+        <td>P. K. Dutt</td>
+      </tr>
+      <tr>
+        <td>55</td>
+        <td>CH055</td>
+        <td>General &amp; Inorganic Chemistry (Part-I)</td>
+        <td>R. Sarkar</td>
+      </tr>
+      <tr>
+        <td>56</td>
+        <td>CH056</td>
+        <td>General &amp; Inorganic Chemistry (Part-II)</td>
+        <td>R. Sarkar</td>
+      </tr>
+      <tr>
+        <td>57</td>
+        <td>CH057</td>
+        <td>General &amp; Inorganic Chemistry (Vol - I &amp; II)</td>
+        <td>P. K. Dutta</td>
+      </tr>
+      <tr>
+        <td>58</td>
+        <td>CH058</td>
+        <td>General &amp; Inorganic Chemistry [Part-I]</td>
+        <td>R. Sarkar</td>
+      </tr>
+      <tr>
+        <td>59</td>
+        <td>CH059</td>
+        <td>Industrial Chemistry</td>
+        <td>B. K. Sharma</td>
+      </tr>
+      <tr>
+        <td>60</td>
+        <td>CH060</td>
+        <td>Industrial Chemistry [Part-II, Metallurgy]</td>
+        <td>R. K. Das</td>
+      </tr>
+      <tr>
+        <td>61</td>
+        <td>CH061</td>
+        <td>Industrial Chemistry [Part-II, Organic &amp; Inorganic]</td>
+        <td>R. K. Das</td>
+      </tr>
+      <tr>
+        <td>62</td>
+        <td>CH062</td>
+        <td>Inorganic Chemistry</td>
+        <td>R. T. Morrison, R. N. Boyd</td>
+      </tr>
+      <tr>
+        <td>63</td>
+        <td>CH063</td>
+        <td>Inorganic Chemistry</td>
+        <td>J. E. Huheey E. A. Keiter, R. L. Keiter</td>
+      </tr>
+      <tr>
+        <td>64</td>
+        <td>CH064</td>
+        <td>Inorganic Chemistry</td>
+        <td>D. Banerjee</td>
+      </tr>
+      <tr>
+        <td>65</td>
+        <td>CH065</td>
+        <td>Inorganic Chemistry</td>
+        <td>S. H. Rivers &amp; Atkins</td>
+      </tr>
+      <tr>
+        <td>66</td>
+        <td>CH066</td>
+        <td>Inorganic Chemistry (4th ed.)</td>
+        <td>Huheey</td>
+      </tr>
+      <tr>
+        <td>67</td>
+        <td>CH067</td>
+        <td>Inorganic Chemistry (Study Guide)</td>
+        <td>C. Saha, S. Chakraborty, A. Saha, K. Basu</td>
+      </tr>
+      <tr>
+        <td>68</td>
+        <td>CH068</td>
+        <td>Inorganic Chemistry (Vol-1)</td>
+        <td>Das &amp; das</td>
+      </tr>
+      <tr>
+        <td>69</td>
+        <td>CH069</td>
+        <td>Inorganic Chemistry (Vol-2)</td>
+        <td>Das &amp; das</td>
+      </tr>
+      <tr>
+        <td>70</td>
+        <td>CH070</td>
+        <td>Inorganic Chemistry (Vol-3)</td>
+        <td>Das &amp; das</td>
+      </tr>
+      <tr>
+        <td>71</td>
+        <td>CH071</td>
+        <td>Inorganic Chemistry (Vol-II)</td>
+        <td>R. L. Dutta</td>
+      </tr>
+      <tr>
+        <td>72</td>
+        <td>CH072</td>
+        <td>Inorganic Chemistry [3rd Ed.]</td>
+        <td>Huheey James</td>
+      </tr>
+      <tr>
+        <td>73</td>
+        <td>CH073</td>
+        <td>Inorganic Chemistry [Vol-I]</td>
+        <td>R. L. Dutta</td>
+      </tr>
+      <tr>
+        <td>74</td>
+        <td>CH074</td>
+        <td>Inorganic Chemistry -Principles of Structure &amp; Reactivity</td>
+        <td>J. E. Huheey, E. A. Keiter, R. L. Keiter</td>
+      </tr>
+      <tr>
+        <td>75</td>
+        <td>CH075</td>
+        <td>Inorganic Spectroscopy</td>
+        <td>William Kemp</td>
+      </tr>
+      <tr>
+        <td>76</td>
+        <td>CH076</td>
+        <td>Mechanism I Organic Chemistry</td>
+        <td>Peter Sykes</td>
+      </tr>
+      <tr>
+        <td>77</td>
+        <td>CH077</td>
+        <td>Modern Inorganic Chemistry</td>
+        <td>W. L. Jolly</td>
+      </tr>
+      <tr>
+        <td>78</td>
+        <td>CH078</td>
+        <td>Modern Methods of Inorganic Chemistry Synthesis</td>
+        <td>William Carruthers &amp; Lain Coldham</td>
+      </tr>
+      <tr>
+        <td>79</td>
+        <td>CH079</td>
+        <td>Molecular Orbital Theory for Organic Chemistry</td>
+        <td>A. Streitwieser</td>
+      </tr>
+      <tr>
+        <td>80</td>
+        <td>CH080</td>
+        <td>Molecular Organic Chemistry</td>
+        <td>Jaginder Singh</td>
+      </tr>
+      <tr>
+        <td>81</td>
+        <td>CH081</td>
+        <td>New Concise Inorganic Chemistry</td>
+        <td>J. D. Lee</td>
+      </tr>
+      <tr>
+        <td>82</td>
+        <td>CH082</td>
+        <td>Numerical Problems on Physical Chemistry</td>
+        <td>Dr. Amalendu Ghosh</td>
+      </tr>
+      <tr>
+        <td>83</td>
+        <td>CH083</td>
+        <td>Organic Chemistry</td>
+        <td>I. L. Finar</td>
+      </tr>
+      <tr>
+        <td>84</td>
+        <td>CH084</td>
+        <td>Organic Chemistry</td>
+        <td>Morrison &amp; Boyd</td>
+      </tr>
+      <tr>
+        <td>85</td>
+        <td>CH085</td>
+        <td>Organic Chemistry</td>
+        <td>Graham Solomons</td>
+      </tr>
+      <tr>
+        <td>86</td>
+        <td>CH086</td>
+        <td>Organic Chemistry</td>
+        <td>G. Marc Loudon</td>
+      </tr>
+      <tr>
+        <td>87</td>
+        <td>CH087</td>
+        <td>Organic Chemistry</td>
+        <td>Pathak &amp; Saha</td>
+      </tr>
+      <tr>
+        <td>88</td>
+        <td>CH088</td>
+        <td>Organic Chemistry</td>
+        <td>Paula Y. Bruice</td>
+      </tr>
+      <tr>
+        <td>89</td>
+        <td>CH089</td>
+        <td>Organic Chemistry (Vol-1)</td>
+        <td>Saha, Chakraborty, Saha &amp; Basu</td>
+      </tr>
+      <tr>
+        <td>90</td>
+        <td>CH090</td>
+        <td>Organic Chemistry (Vol-2)</td>
+        <td>I. L. Finar</td>
+      </tr>
+      <tr>
+        <td>91</td>
+        <td>CH091</td>
+        <td>Organic Chemistry (Vol-1)</td>
+        <td>I. L. Finar</td>
+      </tr>
+      <tr>
+        <td>92</td>
+        <td>CH092</td>
+        <td>Organic Chemistry (Vol-I)</td>
+        <td>B. Sharma , G. P. Pokharujal, S. K. Sharma</td>
+      </tr>
+      <tr>
+        <td>93</td>
+        <td>CH093</td>
+        <td>Organic Chemistry (Vol-II)</td>
+        <td>B. Sharma , G. P. Pokharujal, S. K. Sharma</td>
+      </tr>
+      <tr>
+        <td>94</td>
+        <td>CH094</td>
+        <td>Organic Reaction Their Mechanisms</td>
+        <td>P. S. Kalsi</td>
+      </tr>
+      <tr>
+        <td>95</td>
+        <td>CH095</td>
+        <td>Organic Spectroscopy</td>
+        <td>William Kemp</td>
+      </tr>
+      <tr>
+        <td>96</td>
+        <td>CH096</td>
+        <td>Organic Synthesis – The Discontinuous Approach</td>
+        <td>Stuart Warren</td>
+      </tr>
+      <tr>
+        <td>97</td>
+        <td>CH097</td>
+        <td>Physical Chemistry</td>
+        <td>P.C. Rakshit</td>
+      </tr>
+      <tr>
+        <td>98</td>
+        <td>CH098</td>
+        <td>Physical Chemistry</td>
+        <td>G. W. Castellan</td>
+      </tr>
+      <tr>
+        <td>99</td>
+        <td>CH099</td>
+        <td>Physical Chemistry</td>
+        <td>Atkins</td>
+      </tr>
+      <tr>
+        <td>100</td>
+        <td>CH100</td>
+        <td>Physical Chemistry</td>
+        <td>Ira &amp; Levine</td>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>CH101</td>
+        <td>Physical Chemistry</td>
+        <td>Gilbert W. Castell</td>
+      </tr>
+      <tr>
+        <td>102</td>
+        <td>CH102</td>
+        <td>Physical Chemistry</td>
+        <td>Amalendu Ghosal</td>
+      </tr>
+      <tr>
+        <td>103</td>
+        <td>CH103</td>
+        <td>Physical Chemistry (Vol-I)</td>
+        <td>Hrishikesh Chatterjee</td>
+      </tr>
+      <tr>
+        <td>104</td>
+        <td>CH104</td>
+        <td>Physical Chemistry (Vol-II)</td>
+        <td>Hrishikesh Chatterjee</td>
+      </tr>
+      <tr>
+        <td>105</td>
+        <td>CH105</td>
+        <td>Physical Chemistry [Vol-1]</td>
+        <td>K. L. Kapoor</td>
+      </tr>
+      <tr>
+        <td>106</td>
+        <td>CH106</td>
+        <td>Physical Chemistry [Vol-2]</td>
+        <td>K. L. Kapoor</td>
+      </tr>
+      <tr>
+        <td>107</td>
+        <td>CH107</td>
+        <td>Physical Chemistry [Vol-3]</td>
+        <td>K. L. Kapoor</td>
+      </tr>
+      <tr>
+        <td>108</td>
+        <td>CH108</td>
+        <td>Physical Chemistry Through Problems</td>
+        <td>S. K. Dogra, S. Dogra</td>
+      </tr>
+      <tr>
+        <td>109</td>
+        <td>CH109</td>
+        <td>Practical Chemistry</td>
+        <td>S. C. Das &amp; Chakraborty</td>
+      </tr>
+      <tr>
+        <td>110</td>
+        <td>CH110</td>
+        <td>Principles of Physical Chemistry</td>
+        <td>Samuel H. Maron, Carl F. Prutton</td>
+      </tr>
+      <tr>
+        <td>111</td>
+        <td>CH111</td>
+        <td>Principles of Physical Chemistry [4th edt.]</td>
+        <td>Maren &amp; Prutton</td>
+      </tr>
+      <tr>
+        <td>112</td>
+        <td>CH112</td>
+        <td>Problem on Physical Chemistry</td>
+        <td>Pahari &amp; Pahari</td>
+      </tr>
+      <tr>
+        <td>113</td>
+        <td>CH113</td>
+        <td>Problems &amp; Their Solution Inorganic Chemistry</td>
+        <td>K. I. L. Finar</td>
+      </tr>
+      <tr>
+        <td>114</td>
+        <td>CH114</td>
+        <td>Qualitative Chemical Semi-micro Analysis</td>
+        <td>P. Agasyan, Artavaz Beknazarov</td>
+      </tr>
+      <tr>
+        <td>115</td>
+        <td>CH115</td>
+        <td>Quantum Chemistry</td>
+        <td>Nirad Gopal Mukherjee</td>
+      </tr>
+      <tr>
+        <td>116</td>
+        <td>CH116</td>
+        <td>Quantum Chemistry</td>
+        <td>Donald A. McQuarrie</td>
+      </tr>
+      <tr>
+        <td>117</td>
+        <td>CH117</td>
+        <td>Reaction Mechanism in Organic Chemistry</td>
+        <td>S. M. Mukherjee S. P. Singh</td>
+      </tr>
+      <tr>
+        <td>118</td>
+        <td>CH118</td>
+        <td>Selected Topics In Inorganic Chemistry</td>
+        <td>W. H. Malik, G. D. Tuli, R. D. Madan</td>
+      </tr>
+      <tr>
+        <td>119</td>
+        <td>CH119</td>
+        <td>Spectroscopy of Organic Compounds</td>
+        <td>P. S. Kalsi</td>
+      </tr>
+      <tr>
+        <td>120</td>
+        <td>CH120</td>
+        <td>Stereochemistry Confrontation &amp; Mechanism</td>
+        <td>P. S. Kalsi</td>
+      </tr>
+      <tr>
+        <td>121</td>
+        <td>CH121</td>
+        <td>Stereochemistry of Organic Compounds</td>
+        <td>D. Nasipuri</td>
+      </tr>
+      <tr>
+        <td>122</td>
+        <td>CH122</td>
+        <td>Stereochemistry of Organic Compounds</td>
+        <td>Ernest L. Eliel</td>
+      </tr>
+      <tr>
+        <td>123</td>
+        <td>CH123</td>
+        <td>Text Book of Physical Chemistry</td>
+        <td>Samuel Glastone</td>
+      </tr>
+      <tr>
+        <td>124</td>
+        <td>CH124</td>
+        <td>Theoretical Principles of Inorganic Chemistry</td>
+        <td>G. S. Manku</td>
+      </tr>
+      <tr>
+        <td>125</td>
+        <td>CH125</td>
+        <td>University Handbook of Undergraduate Chemistry Experiments</td>
+        <td>G. N. Mukherjee</td>
+      </tr>
+      <tr>
+        <td>126</td>
+        <td>CH126</td>
+        <td>Vogel’s Qualitative Inorganic Analysis</td>
+        <td>G. Svehla, A. I. Vogel</td>
+      </tr>
+      <tr>
+        <td>127</td>
+        <td>CH127</td>
+        <td>Vogel’s Text book of Quantitative Chemical Analysis</td>
+        <td>Barnes, Thomas</td>
+      </tr>
+    </table>
+
+    <table id="t3">
+      <tr>
+        <th title="Field #1">SL. NO.</th>
+        <th title="Field #2">CALL NO.</th>
+        <th title="Field #3">TITLE</th>
+        <th title="Field #4">AUTHOR (S)</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td> CS001</td>
+        <td>Advance Computer Architecture</td>
+        <td>Kai Hwang</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td> CS002</td>
+        <td>Advanced Concepts in Operating Systems</td>
+        <td>M. Singhal, N. G. Shivarathi</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td> CS003</td>
+        <td>C Solutions</td>
+        <td>Yashavant Kanetkar</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td> CS004</td>
+        <td>Cobol Programming (MS Cobol, and Cobol 85)</td>
+        <td>M. K. Roy, D. Ghosh Dastidar</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td> CS005</td>
+        <td>Communication System (Analog &amp; Digital)</td>
+        <td>Sanjay Sharma</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td> CS006</td>
+        <td>Compilers – Principles , Technique &amp; Tools</td>
+        <td>S. A. V. Aho, M. S. Lam, R. Sethi, J. D. Ullman</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td> CS007</td>
+        <td>Computer Design</td>
+        <td>Santanu Chatterjee</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td> CS008</td>
+        <td>Computer Fundamental &amp; Programming</td>
+        <td>Dr. K. Bhattachariya</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td> CS009</td>
+        <td>Computer Graphics – C Version</td>
+        <td>D. Hearn, M. P. Baker</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td> CS010</td>
+        <td>Computer Networks</td>
+        <td>Andrew S. Tanes, Davis J. Wetherall</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td> CS011</td>
+        <td>Computer Programming in Fortran 90 &amp; 95</td>
+        <td>V. Rajaraman</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td> CS012</td>
+        <td>Computer System Architecture</td>
+        <td>M. Morris Mano</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td> CS013</td>
+        <td>Cryptography and Network Security</td>
+        <td>William Stallings</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td> CS014</td>
+        <td>Data Communication &amp; Networking</td>
+        <td>Behrouz A. Forouzan</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td> CS015</td>
+        <td>Data Structure &amp; Algorithm Analysis In C</td>
+        <td>Mark Allen Weiss</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td> CS016</td>
+        <td>Database System Concepts</td>
+        <td>A. Silberscatz, H. F. Korth, S. Sudarshan</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td> CS017</td>
+        <td>Digital Logic &amp; Computer Design</td>
+        <td>Morris Mano</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td> CS018</td>
+        <td>Elements of Microprocessor &amp; Microcomputers</td>
+        <td>B. Ram</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td> CS019</td>
+        <td>Exploring C</td>
+        <td>Yashavant Kanetkar</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td> CS020</td>
+        <td>Fortran 77 &amp; Numerical Method</td>
+        <td>C. Xavier</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td> CS021</td>
+        <td>Front page 2000</td>
+        <td>Gene Weisskopt</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td> CS022</td>
+        <td>Fundamentals of Computer Algorithms</td>
+        <td>E. Horowitz, S. Sahni, S. Rajshekharan</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td> CS023</td>
+        <td>Fundamentals of Software Engineering</td>
+        <td>Rajib Mall</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td> CS024</td>
+        <td>INIX (Shell) Programming</td>
+        <td>Yashavant Kanetkar</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td> CS025</td>
+        <td>Inside XML</td>
+        <td>HOLZNER</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td> CS026</td>
+        <td>Introduction to Artificial Intelligence with JAVA</td>
+        <td>D. W. Patterson</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td> CS027</td>
+        <td>Introduction to Formal Language &amp; Automata</td>
+        <td>Peter Linz</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td> CS028</td>
+        <td>Let us C</td>
+        <td>Yashavant Kanetkar</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td> CS029</td>
+        <td>LINUX – Network administrator’s Guide</td>
+        <td>O. Kirch &amp; T. Dawson</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td> CS030</td>
+        <td>Microprocessor Archt., Pro &amp; Appl. With BOBS</td>
+        <td>Ramesh Gaonkar</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td> CS031</td>
+        <td>Microsoft Office 2000</td>
+        <td>Greg Perry</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td> CS032</td>
+        <td>Networks &amp; Systems</td>
+        <td>D. Roychowdhury</td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td> CS033</td>
+        <td>Object Oriented Programming in C++</td>
+        <td>Robert Lafore</td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td> CS034</td>
+        <td>Object Oriented Programming in C++</td>
+        <td>E. Balaguruswami</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td> CS035</td>
+        <td>Operating System Principles</td>
+        <td>A. Silberscatz, P.B. Galvin, G. Gagne</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td> CS036</td>
+        <td>Operation Research</td>
+        <td>S. Kalavathy</td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td> CS037</td>
+        <td>Oracle 8-DBA Handbook</td>
+        <td>Kevin Konel</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td> CS038</td>
+        <td>Oracle 9i, The Complete Reference</td>
+        <td>Loney, Koch</td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td> CS039</td>
+        <td>Personal Computing Software Tools</td>
+        <td>A. B. Chaudhari</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td> CS040</td>
+        <td>Problems and Solutions of Control Systems (Analog &amp; Digital)</td>
+        <td>A. K. Jairath</td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td> CS041</td>
+        <td>Professional ASP XML</td>
+        <td>Mark, Baartse</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td> CS042</td>
+        <td>Programming in ANSI C</td>
+        <td>E. Balaguruswami</td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td> CS043</td>
+        <td>Programming in with Java</td>
+        <td>E. Balaguruswami</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td> CS044</td>
+        <td>Programming with C</td>
+        <td>Gottfried</td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td> CS045</td>
+        <td>Schaum’s Outline – Data Structures</td>
+        <td>Seymour Lipschutz</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td> CS046</td>
+        <td>System Software</td>
+        <td>L. L. Beck, D. Manjula</td>
+      </tr>
+      <tr>
+        <td>47</td>
+        <td> CS047</td>
+        <td>TCP /IP/ Protocol in C</td>
+        <td>B. A. Forouzan</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td> CS048</td>
+        <td>Test Your C Skills</td>
+        <td>Yashavant Kanetkar</td>
+      </tr>
+      <tr>
+        <td>49</td>
+        <td> CS049</td>
+        <td>The Complete Reference of JAVA</td>
+        <td>Herbert Schildt</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td> CS050</td>
+        <td>The programming Language of Oracle (SQL, PL/SQL)</td>
+        <td>Ivan Bayross</td>
+      </tr>
+      <tr>
+        <td>51</td>
+        <td> CS051</td>
+        <td>Theory of Computer Science</td>
+        <td>Chandrashekhar</td>
+      </tr>
+      <tr>
+        <td>52</td>
+        <td> CS052</td>
+        <td>Theory of Computer Science –Automata, Language</td>
+        <td>K. L. P. Mishra, N. C. Chandra, Sekharan</td>
+      </tr>
+      <tr>
+        <td>53</td>
+        <td> CS053</td>
+        <td>Understanding Pointers in C</td>
+        <td>Yashavant &amp; Kanetkar</td>
+      </tr>
+      <tr>
+        <td>54</td>
+        <td> CS054</td>
+        <td>Using Oracle 8/81</td>
+        <td>William G. Page</td>
+      </tr>
+      <tr>
+        <td>55</td>
+        <td> CS055</td>
+        <td>Visual C++6 (SAMS)</td>
+        <td>Mickey Williams</td>
+      </tr>
+      <tr>
+        <td>56</td>
+        <td> CS056</td>
+        <td>Web Technology</td>
+        <td>Achyut Godbole, Kahate</td>
+      </tr>
+      <tr>
+        <td>57</td>
+        <td> CS057</td>
+        <td>Web Technology Design</td>
+        <td>C. Xavier</td>
+      </tr>
+      <tr>
+        <td>58</td>
+        <td> CS058</td>
+        <td>Your UNIX, The ultimate Guide</td>
+        <td>Sumitabha Das</td>
+      </tr>
+    </table>
+
+    <table id="t4">
+      <tr>
+        <th title="Field #1">SL. NO.</th>
+        <th title="Field #2">CALL NO.</th>
+        <th title="Field #3">TITLE</th>
+        <th title="Field #4">AUTHOR(S)</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>EC001</td>
+        <td>An Introduction Of Positive Economics</td>
+        <td>Richard G. Lipsey</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>EC002</td>
+        <td>An Introduction To A Mathematical Treatment Of Economics</td>
+        <td>G. C. Archibald &amp; Richard G. Lipsey</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>EC003</td>
+        <td>Business Economics</td>
+        <td>P. N. Chopra</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>EC004</td>
+        <td>Development Economics</td>
+        <td>Debraj Roy</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>EC005</td>
+        <td>Development Economics</td>
+        <td>Yujiro Hayami</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>EC006</td>
+        <td>Development Policies</td>
+        <td>Debes Mukherjee</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>EC007</td>
+        <td>Economic Analysis</td>
+        <td>Kenneth E. Bouling</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>EC008</td>
+        <td>Economic Analysis</td>
+        <td>Sundaram &amp; Sundaram</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>EC009</td>
+        <td>Economic Development</td>
+        <td>Michael P. Todaro</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>EC010</td>
+        <td>Economic History Of India (1757 To 1966)</td>
+        <td>G. Kaushal</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>EC011</td>
+        <td>Economic Policy &amp; Planning</td>
+        <td>V. G. Mankar</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>EC012</td>
+        <td>Economic Theory</td>
+        <td>Dewett &amp; Verma</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>EC013</td>
+        <td>Economic Theory &amp; Operations Analysis</td>
+        <td>William J. Baumol</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>EC014</td>
+        <td>Economics (Micro &amp; Macro)</td>
+        <td>J. K. Mitra</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>EC015</td>
+        <td>Economics – An Introductory Analysis (Micro &amp; Macro)</td>
+        <td>Paul A. Samuelson</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>EC016</td>
+        <td>Fundamental Methods Of Mathematical Economics</td>
+        <td>Alpha C. Chiang</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>EC017</td>
+        <td>Government Finance Of [Economics Of The Public Sector]</td>
+        <td>Due &amp; Friend Laender</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>EC018</td>
+        <td>Growth &amp; Development</td>
+        <td>A. P. Thirlwall</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>EC019</td>
+        <td>Indian Economy</td>
+        <td>S. K. Mishra &amp; V.V.K. Puri</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>EC020</td>
+        <td>Indian Economy</td>
+        <td>Datt &amp; Sundhankam</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>EC021</td>
+        <td>Indian Economy</td>
+        <td>A. N. Agarwal</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td>EC022</td>
+        <td>Indian Economy</td>
+        <td>Dr. Sampat Mukherjee &amp; Debes Mukherjee</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td>EC023</td>
+        <td>Indian Economy Since Independence</td>
+        <td>Uma Kapila</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td>EC024</td>
+        <td>Intermediate Microeconomics</td>
+        <td>Hal R. Varian</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>EC025</td>
+        <td>International Economics</td>
+        <td>Miltiades Chacholiades</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td>EC026</td>
+        <td>International Economics</td>
+        <td>Peter H. Lindert</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td>EC027</td>
+        <td>International Economics</td>
+        <td>Sodersten &amp; Reed</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td>EC028</td>
+        <td>International Economics</td>
+        <td>Dominic Salvatore</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td>EC029</td>
+        <td>International Economics</td>
+        <td>Kindelberger’S</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td>EC030</td>
+        <td>Introduction Of Positive Economics</td>
+        <td>Lipsey &amp; Chrystal</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td>EC031</td>
+        <td>Introduction To Macro Economic Theory</td>
+        <td>Gopal Tribedy</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td>EC032</td>
+        <td>Leading Issues In Economic Development</td>
+        <td>Meier &amp; Ruach</td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td>EC033</td>
+        <td>Linear Programming &amp; Economic Analysis</td>
+        <td>Dorfman, Samuelson, Solow</td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td>EC034</td>
+        <td>Macro - Economic Theory</td>
+        <td>Gardner Ackley</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td>EC035</td>
+        <td>Macro - Economics</td>
+        <td>N. Gregory Mankiw</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td>EC036</td>
+        <td>Macro Economic Theory</td>
+        <td>Jaydeb Sarkhel</td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td>EC037</td>
+        <td>Macro Economics</td>
+        <td>Dornbusch &amp; Fischer &amp; Startz</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td>EC038</td>
+        <td>Macroeconomic Theory &amp; Policy (2Nd Edition)</td>
+        <td>William H. Branson</td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td>EC039</td>
+        <td>Mathematical Techniques &amp; Economic Analysis</td>
+        <td>Jaydeb Sarkhel &amp; Anidya Bhukta</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td>EC040</td>
+        <td>Micro Economic Theory</td>
+        <td>Ferguson &amp; Gould</td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td>EC041</td>
+        <td>Micro Economic Theory</td>
+        <td>Henderson, Quandt</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td>EC042</td>
+        <td>Micro Economics</td>
+        <td>Robert S. Pindyck &amp; Danniel L. Rubinfeld</td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td>EC043</td>
+        <td>Micro Economics</td>
+        <td>H. Gravelle &amp; R. Rees</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td>EC044</td>
+        <td>Micro Economics</td>
+        <td>Maddala &amp; Miller</td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td>EC045</td>
+        <td>Micro Economics</td>
+        <td>Dornbusch &amp; Fischer</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td>EC046</td>
+        <td>Microeconomics Theory - A Mathematical Approach</td>
+        <td>James M. Henderson &amp; Richard E. Quandt</td>
+      </tr>
+      <tr>
+        <td>47</td>
+        <td>EC047</td>
+        <td>Microeconomics</td>
+        <td>G. S. Maddala</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td>EC048</td>
+        <td>Microeconomics &amp; Statistics</td>
+        <td>Das &amp; Sengupta</td>
+      </tr>
+      <tr>
+        <td>49</td>
+        <td>EC049</td>
+        <td>Microeconomics &amp; Statistics</td>
+        <td>Banerjee &amp; Mazumder</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td>EC050</td>
+        <td>Modern Economic Theory</td>
+        <td>Sampat Mukherjee</td>
+      </tr>
+      <tr>
+        <td>51</td>
+        <td>EC051</td>
+        <td>Modern Economic Theory</td>
+        <td>K. K. Dewett</td>
+      </tr>
+      <tr>
+        <td>52</td>
+        <td>EC052</td>
+        <td>Modern Microeconomics</td>
+        <td>A. Koutsoyiannis</td>
+      </tr>
+      <tr>
+        <td>53</td>
+        <td>EC053</td>
+        <td>Money, Banking, International Trade &amp; Public Finance</td>
+        <td>D.M. Mithani</td>
+      </tr>
+      <tr>
+        <td>54</td>
+        <td>EC054</td>
+        <td>Operations Research</td>
+        <td>Handy &amp; Taha</td>
+      </tr>
+      <tr>
+        <td>55</td>
+        <td>EC055</td>
+        <td>Price Theory</td>
+        <td>W. J. L. Ryan, Revised By D. W. Pearce</td>
+      </tr>
+      <tr>
+        <td>56</td>
+        <td>EC056</td>
+        <td>Problems Of Indian Economy</td>
+        <td>Charan D. Wardha</td>
+      </tr>
+      <tr>
+        <td>57</td>
+        <td>EC057</td>
+        <td>Public Economics</td>
+        <td>S. Ganguly</td>
+      </tr>
+      <tr>
+        <td>58</td>
+        <td>EC058</td>
+        <td>Public Finance In Theory &amp; Practice</td>
+        <td>Musgrave &amp; Musgrave</td>
+      </tr>
+      <tr>
+        <td>59</td>
+        <td>EC059</td>
+        <td>The Economics Of Development &amp; Planning</td>
+        <td>M. L. Jhingan</td>
+      </tr>
+      <tr>
+        <td>60</td>
+        <td>EC060</td>
+        <td>The India Economy</td>
+        <td>Lucas &amp; Ppanek</td>
+      </tr>
+      <tr>
+        <td>61</td>
+        <td>EC061</td>
+        <td>The Indian Economy</td>
+        <td>Pramit Chowdhury</td>
+      </tr>
+      <tr>
+        <td>62</td>
+        <td>EC062</td>
+        <td>The Indian Economy</td>
+        <td>Dhires Bhattacharya</td>
+      </tr>
+      <tr>
+        <td>63</td>
+        <td>EC063</td>
+        <td>The Indian Economy (Problems &amp; Prospects)</td>
+        <td>Bimal Jain</td>
+      </tr>
+      <tr>
+        <td>64</td>
+        <td>EC064</td>
+        <td>The Political Economy Of Underdevelopment</td>
+        <td>Amiya Mukar Bagchi</td>
+      </tr>
+      <tr>
+        <td>65</td>
+        <td>EC065</td>
+        <td>The Political Economy Of Development</td>
+        <td>Debes Bhattacharya</td>
+      </tr>
+    </table>
+
+    <table id="t5">
+      <tr>
+        <th title="Field #1">SL. NO.</th>
+        <th title="Field #2">CALL NO.</th>
+        <th title="Field #3">TITLE</th>
+        <th title="Field #4">AUTHOR (S)</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>MA001</td>
+        <td>A Brief Course of Higher Mathematics</td>
+        <td>Kudryavtsev- Demidovich</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>MA002</td>
+        <td>A Course of Mathematical Analysis</td>
+        <td>Narayan-Mittal</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>MA003</td>
+        <td>A First Course in Abstract Algebra</td>
+        <td>John.B.Frabigh</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>MA004</td>
+        <td>A Text Book Of Analytical Geometry</td>
+        <td>M.C.Chaki</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>MA005</td>
+        <td>A Textbook of Vector Calculus</td>
+        <td>Narayan-Mittal</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>MA006</td>
+        <td>A Treatise on Calculus</td>
+        <td>Dr. Narayan Kumar Majumde</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>MA007</td>
+        <td>Advance Analytical Dynamics</td>
+        <td>Ghosh-Cakraborty</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>MA008</td>
+        <td>Advanced Analytical Geometry</td>
+        <td>Chatterjee-Chatterjee</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>MA009</td>
+        <td>Advanced Analytical Geometry of 2D &amp; 3D</td>
+        <td>UtpalChatterjee-Nandini Chatterjee</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>MA010</td>
+        <td>Advanced Analytical Statics</td>
+        <td>S.Mondal</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>MA011</td>
+        <td>Advanced Differential Calculus of Several Variables</td>
+        <td>Subir Kumar Mukherjee</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>MA012</td>
+        <td>Advanced Engineering</td>
+        <td>H.K. Das</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>MA013</td>
+        <td>Advanced Higher Algebra</td>
+        <td>Ghosh-Chakraborty</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>MA014</td>
+        <td>Advanced Higher Algebra</td>
+        <td>A.N. Das</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>MA015</td>
+        <td>Algebra</td>
+        <td>R.M. Khan</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>MA016</td>
+        <td>Algebra(Classical, Modern, Linear, Boolean)</td>
+        <td>R.M. Khan</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>MA017</td>
+        <td>An E.Treatise on the Dynamics of Practical And Rigid Bod</td>
+        <td>S.L. Loney</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>MA018</td>
+        <td>An Elementary Treatise on Co-Ordinate Geometry of 3D</td>
+        <td>R.J.T. Bell</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>MA019</td>
+        <td>An Intro. To Analysis Differential Calculus (Part II)</td>
+        <td>Maity-Ghosh</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>MA020</td>
+        <td>An Introduction to Analysis Differential Calculus</td>
+        <td>Ghosh-Maity</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>MA021</td>
+        <td>An Introduction to Analysis Integral calculus</td>
+        <td>Maity- Ghosh</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td>MA022</td>
+        <td>An Introduction to differential Equation</td>
+        <td>Ghosh-Maity</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td>MA023</td>
+        <td>An Introduction to Differential Equation</td>
+        <td>Maity- Ghosh</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td>MA024</td>
+        <td>Analytical Dynamics</td>
+        <td>Ghosh- Chakraborty</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>MA025</td>
+        <td>Analytical Dynamics</td>
+        <td>Das-Mukherjee</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td>MA026</td>
+        <td>Analytical Dynamics of Particle</td>
+        <td>Ganguly-Saha</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td>MA027</td>
+        <td>Analytical Geometry</td>
+        <td>Arup kr Mukherjee -Naba kr Bej</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td>MA028</td>
+        <td>Analytical Geometry &amp; Vector Analysis</td>
+        <td>Bhattacharya- Gupta</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td>MA029</td>
+        <td>Analytical Geometry And Vector Analysis</td>
+        <td>Ghosh-Chakraborty</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td>MA030</td>
+        <td>Analytical Geometry of Two And Three Dimensions</td>
+        <td>R,M Khan</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td>MA031</td>
+        <td>Analytical Geometry of two and three dimensions</td>
+        <td>R.M. Khanna</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td>MA032</td>
+        <td>Analytical Geometry &amp; Vector Analysis</td>
+        <td>Ghosh-Chakraborty</td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td>MA033</td>
+        <td>Analytical Solid Geometry</td>
+        <td>Narayan-Mittal</td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td>MA034</td>
+        <td>Analytical Statistics</td>
+        <td>M.C.Ghosh</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td>MA035</td>
+        <td>Application of Calculus</td>
+        <td>Bandhopadhaya-Maity</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td>MA036</td>
+        <td>Basic Statistics</td>
+        <td>Goon-Gupta-Dasgupta</td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td>MA037</td>
+        <td>Complex Variable And Applications</td>
+        <td>Brown-Churchill</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td>MA038</td>
+        <td>Computer Oriented Numerical Methods</td>
+        <td>V.Rajaraman</td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td>MA039</td>
+        <td>Co-ordinate Geometry</td>
+        <td>M.L. Khanna</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td>MA040</td>
+        <td>Degree Mathematics</td>
+        <td>Sarkar-Sarkar</td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td>MA041</td>
+        <td>Degree Mathematics</td>
+        <td>Chatterjee-Pal</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td>MA042</td>
+        <td>Degree Mathematics (year to year solution)</td>
+        <td>Sarkar&amp;Sarkar</td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td>MA043</td>
+        <td>Degree Mathematics Vol-I</td>
+        <td>Chatterjee-Pal</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td>MA044</td>
+        <td>Degree Mathematics Vol-II</td>
+        <td>Chatterjee-Pal</td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td>MA045</td>
+        <td>Degree Mathematics Vol-III</td>
+        <td>Chatterjee-Pal</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td>MA046</td>
+        <td>Differential Calculus</td>
+        <td>Das-Mukherjee</td>
+      </tr>
+      <tr>
+        <td>47</td>
+        <td>MA047</td>
+        <td>Differential Calculus</td>
+        <td>Maity-Ghosh</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td>MA048</td>
+        <td>Differential Calculus</td>
+        <td>Shanti Narayan</td>
+      </tr>
+      <tr>
+        <td>49</td>
+        <td>MA049</td>
+        <td>Differential Calculus</td>
+        <td>Narayan-Mittal</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td>MA050</td>
+        <td>Differential Calculus (For B.A-B.Sc)</td>
+        <td>Shantinarayan- Mittal</td>
+      </tr>
+      <tr>
+        <td>51</td>
+        <td>MA051</td>
+        <td>Differential Equations</td>
+        <td>M.L. Khanna</td>
+      </tr>
+      <tr>
+        <td>52</td>
+        <td>MA052</td>
+        <td>Differential Equations</td>
+        <td>Ghosh- Chakraborty</td>
+      </tr>
+      <tr>
+        <td>53</td>
+        <td>MA053</td>
+        <td>Discrete Mathematics</td>
+        <td>Sen-Chakraborty</td>
+      </tr>
+      <tr>
+        <td>54</td>
+        <td>MA054</td>
+        <td>Discrete Mathematics and Its Applications</td>
+        <td>Kerndth H Rosen</td>
+      </tr>
+      <tr>
+        <td>55</td>
+        <td>MA055</td>
+        <td>Dynamics</td>
+        <td>Das-Mukherjee</td>
+      </tr>
+      <tr>
+        <td>56</td>
+        <td>MA056</td>
+        <td>Dynamics of a Particle</td>
+        <td>M.L. Khanna</td>
+      </tr>
+      <tr>
+        <td>57</td>
+        <td>MA057</td>
+        <td>Dynamics of Particle</td>
+        <td>Dutta-Jana</td>
+      </tr>
+      <tr>
+        <td>58</td>
+        <td>MA058</td>
+        <td>Dynamics of Particle of Rigid Bodies</td>
+        <td>S.L.Loney</td>
+      </tr>
+      <tr>
+        <td>59</td>
+        <td>MA059</td>
+        <td>Dynamics of Rigid Bodies</td>
+        <td>Nand-Tyagi-Sharma</td>
+      </tr>
+      <tr>
+        <td>60</td>
+        <td>MA060</td>
+        <td>Dynamics(Part II)</td>
+        <td>A.S.Ramsey</td>
+      </tr>
+      <tr>
+        <td>61</td>
+        <td>MA061</td>
+        <td>Elementary Mathematics</td>
+        <td>J.M.Kar</td>
+      </tr>
+      <tr>
+        <td>62</td>
+        <td>MA062</td>
+        <td>Elementary Statistics</td>
+        <td>Malhotra-Gupta</td>
+      </tr>
+      <tr>
+        <td>63</td>
+        <td>MA063</td>
+        <td>Elements of Functional Analysis</td>
+        <td>B.K. Lahisi</td>
+      </tr>
+      <tr>
+        <td>64</td>
+        <td>MA064</td>
+        <td>Elements of Linear Algebra</td>
+        <td>N.C. Majumdar</td>
+      </tr>
+      <tr>
+        <td>65</td>
+        <td>MA065</td>
+        <td>Foundation of Complex Analysis</td>
+        <td>S.Ponnusamy</td>
+      </tr>
+      <tr>
+        <td>66</td>
+        <td>MA066</td>
+        <td>Fundamental of Mathematical Statistics</td>
+        <td>Gupta-Kapoor</td>
+      </tr>
+      <tr>
+        <td>67</td>
+        <td>MA067</td>
+        <td>Fundamental of Statistics (Vol -I)</td>
+        <td>Gun-Gupta- Dasgupta</td>
+      </tr>
+      <tr>
+        <td>68</td>
+        <td>MA068</td>
+        <td>Fundamental of Statistics (Vol-II)</td>
+        <td>Gun-Gupta- Dasgupta</td>
+      </tr>
+      <tr>
+        <td>69</td>
+        <td>MA069</td>
+        <td>Fundamental Treatise on Probability and Statistics</td>
+        <td>Dr. Arup Mukherjee</td>
+      </tr>
+      <tr>
+        <td>70</td>
+        <td>MA070</td>
+        <td>Graph Theory</td>
+        <td>Narsingh Deo</td>
+      </tr>
+      <tr>
+        <td>71</td>
+        <td>MA071</td>
+        <td>Groundwork of Mathematical Probability and Statistics</td>
+        <td>Amritava Gupta</td>
+      </tr>
+      <tr>
+        <td>72</td>
+        <td>MA072</td>
+        <td>Higher Algebra</td>
+        <td>Ghosh-Maity</td>
+      </tr>
+      <tr>
+        <td>73</td>
+        <td>MA073</td>
+        <td>Higher Algebra</td>
+        <td>B.Das</td>
+      </tr>
+      <tr>
+        <td>74</td>
+        <td>MA074</td>
+        <td>Higher Algebra</td>
+        <td>Ghosh-Chakraborty</td>
+      </tr>
+      <tr>
+        <td>75</td>
+        <td>MA075</td>
+        <td>Higher Algebra</td>
+        <td>S.K. Mapa</td>
+      </tr>
+      <tr>
+        <td>76</td>
+        <td>MA076</td>
+        <td>Higher Algebra (Abstract- Linear)</td>
+        <td>S.K. Mapa</td>
+      </tr>
+      <tr>
+        <td>77</td>
+        <td>MA077</td>
+        <td>Higher Algebra (Classical)</td>
+        <td>S.K. Mapa</td>
+      </tr>
+      <tr>
+        <td>78</td>
+        <td>MA078</td>
+        <td>Higher Algebra Including Modern Algebra</td>
+        <td>Ghosh-Chakraborty</td>
+      </tr>
+      <tr>
+        <td>79</td>
+        <td>MA079</td>
+        <td>Higher Engineering Mathematics</td>
+        <td>Dr. B.S.Grerwal</td>
+      </tr>
+      <tr>
+        <td>80</td>
+        <td>MA080</td>
+        <td>Higher Geometry</td>
+        <td>N.C.Mukherjee</td>
+      </tr>
+      <tr>
+        <td>81</td>
+        <td>MA081</td>
+        <td>Hydrostatics</td>
+        <td>J.M Khan</td>
+      </tr>
+      <tr>
+        <td>82</td>
+        <td>MA082</td>
+        <td>Hydrostatics</td>
+        <td>Kar</td>
+      </tr>
+      <tr>
+        <td>83</td>
+        <td>MA083</td>
+        <td>Integral Calculus</td>
+        <td>M.L. Khanna</td>
+      </tr>
+      <tr>
+        <td>84</td>
+        <td>MA084</td>
+        <td>Integral Calculus</td>
+        <td>Das-Mukherjee</td>
+      </tr>
+      <tr>
+        <td>85</td>
+        <td>MA085</td>
+        <td>Integral Calculus</td>
+        <td>Maity-Ghosh</td>
+      </tr>
+      <tr>
+        <td>86</td>
+        <td>MA086</td>
+        <td>Integral Calculus</td>
+        <td>Shantinarayan- P.K.Mittal</td>
+      </tr>
+      <tr>
+        <td>87</td>
+        <td>MA087</td>
+        <td>Integral Calculus Including Differential Equation</td>
+        <td>Das-Mukherjee</td>
+      </tr>
+      <tr>
+        <td>88</td>
+        <td>MA088</td>
+        <td>Introduction to Discrete Mathematics</td>
+        <td>Sen- Chakraborty</td>
+      </tr>
+      <tr>
+        <td>89</td>
+        <td>MA089</td>
+        <td>Introduction to Numerical Analysis</td>
+        <td>Gupta-Bose</td>
+      </tr>
+      <tr>
+        <td>90</td>
+        <td>MA090</td>
+        <td>Introduction to Numerical Analysis</td>
+        <td>S.A.Mollah</td>
+      </tr>
+      <tr>
+        <td>91</td>
+        <td>MA091</td>
+        <td>Introductory Course in Differential Calculus</td>
+        <td>Daniel A.Murray</td>
+      </tr>
+      <tr>
+        <td>92</td>
+        <td>MA092</td>
+        <td>Introductory Methods of Numerical Analysis</td>
+        <td>S.S. Sastry</td>
+      </tr>
+      <tr>
+        <td>93</td>
+        <td>MA093</td>
+        <td>Introductory Numerical Analysis</td>
+        <td>Dutta- Jana</td>
+      </tr>
+      <tr>
+        <td>94</td>
+        <td>MA094</td>
+        <td>Key to Practical Mathematics</td>
+        <td>J.Mukherjee</td>
+      </tr>
+      <tr>
+        <td>95</td>
+        <td>MA095</td>
+        <td>Linear Algebra</td>
+        <td>G.Hadly</td>
+      </tr>
+      <tr>
+        <td>96</td>
+        <td>MA096</td>
+        <td>Linear Programming</td>
+        <td>P.M. Karak</td>
+      </tr>
+      <tr>
+        <td>97</td>
+        <td>MA097</td>
+        <td>Linear Programming</td>
+        <td>Ghosh-Chakraborty</td>
+      </tr>
+      <tr>
+        <td>98</td>
+        <td>MA098</td>
+        <td>Linear Programming</td>
+        <td>G.Hadly</td>
+      </tr>
+      <tr>
+        <td>99</td>
+        <td>MA099</td>
+        <td>Linear Programming and Game theory</td>
+        <td>Ghosh-Chakraborty</td>
+      </tr>
+      <tr>
+        <td>100</td>
+        <td>MA100</td>
+        <td>Linear Programming And Theory of Games</td>
+        <td>P.K. Gupta- Man Mohan</td>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>MA101</td>
+        <td>Linear Programming and Theory of Games</td>
+        <td>P.M. Karak</td>
+      </tr>
+      <tr>
+        <td>102</td>
+        <td>MA102</td>
+        <td>Linear Programming and Theory of Games</td>
+        <td>Chakraborty-Ghosh</td>
+      </tr>
+      <tr>
+        <td>103</td>
+        <td>MA103</td>
+        <td>Linear Programming and Theory of Games</td>
+        <td>Gupta-Mac Mohan</td>
+      </tr>
+      <tr>
+        <td>104</td>
+        <td>MA104</td>
+        <td>Mathematical Analysis</td>
+        <td>Malik-Arora</td>
+      </tr>
+      <tr>
+        <td>105</td>
+        <td>MA105</td>
+        <td>Mathematical Analysis</td>
+        <td>Sitansu Babdhopadhaya</td>
+      </tr>
+      <tr>
+        <td>106</td>
+        <td>MA106</td>
+        <td>Mathematical Probability</td>
+        <td>Banerjee-Dey-Sen</td>
+      </tr>
+      <tr>
+        <td>107</td>
+        <td>MA107</td>
+        <td>Mathematical Probability &amp; Statistics</td>
+        <td>Amritava Gupta</td>
+      </tr>
+      <tr>
+        <td>108</td>
+        <td>MA108</td>
+        <td>Mathematical Statistics</td>
+        <td>Dey-Sen</td>
+      </tr>
+      <tr>
+        <td>109</td>
+        <td>MA109</td>
+        <td>Mathematical Analysis</td>
+        <td>Sitansu Babdhopadhay</td>
+      </tr>
+      <tr>
+        <td>110</td>
+        <td>MA110</td>
+        <td>Numerical Analysis</td>
+        <td>S.A.Mollah</td>
+      </tr>
+      <tr>
+        <td>111</td>
+        <td>MA111</td>
+        <td>Numerical Analysis</td>
+        <td>Dutta-Jana</td>
+      </tr>
+      <tr>
+        <td>112</td>
+        <td>MA112</td>
+        <td>Numerical Analysis</td>
+        <td>Pradhan-Sinha</td>
+      </tr>
+      <tr>
+        <td>113</td>
+        <td>MA113</td>
+        <td>Numerical Analysis and Computational Procedure</td>
+        <td>S.A. Mollah</td>
+      </tr>
+      <tr>
+        <td>114</td>
+        <td>MA114</td>
+        <td>Numerical Methods of Probability And Statistics</td>
+        <td>Sandip Mukherjee</td>
+      </tr>
+      <tr>
+        <td>115</td>
+        <td>MA115</td>
+        <td>Ordinary Differential Equation</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>116</td>
+        <td>MA116</td>
+        <td>Principle of Mathematical Analysis</td>
+        <td>Walter Rudin</td>
+      </tr>
+      <tr>
+        <td>117</td>
+        <td>MA117</td>
+        <td>Probability &amp; Statistics</td>
+        <td>Mathai &amp;Rathie</td>
+      </tr>
+      <tr>
+        <td>118</td>
+        <td>MA118</td>
+        <td>Probability Theory(First Step)</td>
+        <td>E.S.Wentgel</td>
+      </tr>
+      <tr>
+        <td>119</td>
+        <td>MA119</td>
+        <td>Problems in Probability theory</td>
+        <td>Gun-Roy</td>
+      </tr>
+      <tr>
+        <td>120</td>
+        <td>MA120</td>
+        <td>Real Analysis</td>
+        <td>Lahisi- Roy</td>
+      </tr>
+      <tr>
+        <td>121</td>
+        <td>MA121</td>
+        <td>Real Analysis</td>
+        <td>S.K.Mapa</td>
+      </tr>
+      <tr>
+        <td>122</td>
+        <td>MA122</td>
+        <td>Rigid Dynamics</td>
+        <td>Md. Motiur Rahaman</td>
+      </tr>
+      <tr>
+        <td>123</td>
+        <td>MA123</td>
+        <td>Set Theory And Related Topics</td>
+        <td>Seymour Lipschutz</td>
+      </tr>
+      <tr>
+        <td>124</td>
+        <td>MA124</td>
+        <td>Statistics 3rd Edition</td>
+        <td>Murray.R.Spiegel- Laerry.J.Stephens</td>
+      </tr>
+      <tr>
+        <td>125</td>
+        <td>MA125</td>
+        <td>Tensor Calculus&amp; Riemannian Geometry</td>
+        <td>D.C.Agawal</td>
+      </tr>
+      <tr>
+        <td>126</td>
+        <td>MA126</td>
+        <td>Textbook of Matrices</td>
+        <td>Narayan-Mittal</td>
+      </tr>
+      <tr>
+        <td>127</td>
+        <td>MA127</td>
+        <td>The Element of Hydrostatics</td>
+        <td>S.L.Loney</td>
+      </tr>
+      <tr>
+        <td>128</td>
+        <td>MA128</td>
+        <td>The Elements of Co-ordinate Geometry</td>
+        <td>S.L. Loey</td>
+      </tr>
+      <tr>
+        <td>129</td>
+        <td>MA129</td>
+        <td>The Theory of Probability</td>
+        <td>B.Gnedenko</td>
+      </tr>
+      <tr>
+        <td>130</td>
+        <td>MA130</td>
+        <td>Theory of Function of Complex Variable</td>
+        <td>Narayan-Mittal</td>
+      </tr>
+      <tr>
+        <td>131</td>
+        <td>MA131</td>
+        <td>Theory Of Functions of Complex Variable</td>
+        <td>E.T.Copson</td>
+      </tr>
+      <tr>
+        <td>132</td>
+        <td>MA132</td>
+        <td>Topics in Algebra</td>
+        <td>I.N.Herstein</td>
+      </tr>
+      <tr>
+        <td>133</td>
+        <td>MA133</td>
+        <td>Vector Analysis</td>
+        <td>Ghosh-Maity</td>
+      </tr>
+      <tr>
+        <td>134</td>
+        <td>MA134</td>
+        <td>Vector Analysis</td>
+        <td>Ghosh-Cakraborty</td>
+      </tr>
+      <tr>
+        <td>135</td>
+        <td>MA135</td>
+        <td>Vector Analysis</td>
+        <td>M.L. Khanna</td>
+      </tr>
+    </table>
+
+    <table id="t6">
+      <tr>
+        <th title="Field #1">SL. NO.</th>
+        <th title="Field #2">CALL NO.</th>
+        <th title="Field #3">TITLE</th>
+        <th title="Field #4">AUTHOR (S)</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>ZO001</td>
+        <td>A Book of Zoology in Vertebrate</td>
+        <td>Parker – Haswell</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>ZO002</td>
+        <td>A Book of Zoology in Vertebrates</td>
+        <td>A. J. Marshal, W. D. Williams</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>ZO003</td>
+        <td>A textbook of Microbiology</td>
+        <td>R. C. Dubey, D. JK. Maheswari</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>ZO004</td>
+        <td>Adaptation</td>
+        <td>Wallace &amp; SRB</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>ZO005</td>
+        <td>Advanced Molecular Biology</td>
+        <td>R. M. TWyman</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>ZO006</td>
+        <td>An Advanced Laboratory Manual of Zoology</td>
+        <td>Podder - Mukhopadhyay</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>ZO007</td>
+        <td>An Introduction of Genetic Engineering</td>
+        <td>Desmond – S. T. Micholl</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>ZO008</td>
+        <td>An Introduction to Embryology</td>
+        <td>B. I. Balinsky</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>ZO009</td>
+        <td>Animal Adaptation</td>
+        <td>Burnett and Eisner</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>ZO010</td>
+        <td>Animal Parasitology</td>
+        <td>J. D. Smyth</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>ZO011</td>
+        <td>Animal Physiology</td>
+        <td>Eckert - Randall</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>ZO012</td>
+        <td>Berne-Levy Physiology</td>
+        <td>Koeppen – Station – Gilbert</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>ZO013</td>
+        <td>Biochemistry</td>
+        <td>Leninger</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>ZO014</td>
+        <td>Biochemistry</td>
+        <td>Kuchel &amp; Ralston [SCHAUM]</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>ZO015</td>
+        <td>Biochemistry</td>
+        <td>Debajyoti Das</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>ZO016</td>
+        <td>Brain and Brannister’s Clinical Neurology</td>
+        <td>Brain and Brannisters</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>ZO017</td>
+        <td>Cell and Molecular Biology</td>
+        <td>Roberties, Roberties Jr.</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>ZO018</td>
+        <td>Cell biology</td>
+        <td>G. Karp</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>ZO019</td>
+        <td>Cell Biology, Genetics, Molecular Biology</td>
+        <td>D. K. Kar, Soma Halder</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>ZO020</td>
+        <td>Cell Biology, Genetics, Molecular Biology, Evolution, and Ecology</td>
+        <td>P.S. Verma &amp; V. K. Agarwal</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>ZO021</td>
+        <td>Cell Structure &amp; Function</td>
+        <td>Ariel G. Loney, Philip Slekvitz</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td>ZO022</td>
+        <td>Chordate Embryology</td>
+        <td>P.S. Verma, V. K. Agarwal</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td>ZO023</td>
+        <td>Concept and Problem Solving in basic Genetics</td>
+        <td>Davis &amp; Weller</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td>ZO024</td>
+        <td>Concept of Genetics</td>
+        <td>Klug &amp; Cummings</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>ZO025</td>
+        <td>Concepts of Zoology</td>
+        <td>Edward J Kormandy</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td>ZO026</td>
+        <td>Cytogenetic</td>
+        <td>Carl P. Swanson, Timothy Merz, William J Young</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td>ZO027</td>
+        <td>Cytology</td>
+        <td>P.S. Verma &amp; V. K. Agarwal</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td>ZO028</td>
+        <td>Cytology &amp; Genetics</td>
+        <td>Sumitra Sen, Dipak Kumar Kar</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td>ZO029</td>
+        <td>Developmental Biology</td>
+        <td>Gillbert – Singer</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td>ZO030</td>
+        <td>Ecology</td>
+        <td>Mohan P. Arora</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td>ZO031</td>
+        <td>Ecology (Principles &amp; Application)</td>
+        <td>J. L. Chapman, M. J. Reiss</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td>ZO032</td>
+        <td>Ecology &amp; Environment</td>
+        <td>P. D. Sharma</td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td>ZO033</td>
+        <td>Economic Zoology</td>
+        <td>J C Shukla, V B Upadhayay</td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td>ZO034</td>
+        <td>Endocrinology (5th Edition)</td>
+        <td>Mac. E. Hadley</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td>ZO035</td>
+        <td>Environmental Biology and Toxicology</td>
+        <td>P. D. Sharma</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td>ZO036</td>
+        <td>Essential of Medical Pharmacology</td>
+        <td>K. D. Tripathi</td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td>ZO037</td>
+        <td>Evolution</td>
+        <td>M. W. Strickberger</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td>ZO038</td>
+        <td>Evolution – an Introduction</td>
+        <td>Stephen C. Stearns, Rolf F. Hockstra</td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td>ZO039</td>
+        <td>Foundations of Embryology</td>
+        <td>Bruce M. Carlson</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td>ZO040</td>
+        <td>Foundations of Parasitology</td>
+        <td>L. S. Roberts, J. Janovy</td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td>ZO041</td>
+        <td>Fundamentals of Ecology</td>
+        <td>M.C. Dash</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td>ZO042</td>
+        <td>Fundamentals of Ecology</td>
+        <td>E. P. Odum, G. W. Barret</td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td>ZO043</td>
+        <td>Fundamentals of Zoology and Ecology</td>
+        <td>M. C. Dask</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td>ZO044</td>
+        <td>Fundamentals Principles of Bacteriology</td>
+        <td>A. J. Salle</td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td>ZO045</td>
+        <td>Gene Structure &amp; Expression</td>
+        <td>J. D. Hawkins</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td>ZO046</td>
+        <td>Genes (VII)</td>
+        <td>Benjamin Lewin</td>
+      </tr>
+      <tr>
+        <td>47</td>
+        <td>ZO047</td>
+        <td>Genetics</td>
+        <td>M. W. Strickberger</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td>ZO048</td>
+        <td>Harper’s Illustrated Biochemistry</td>
+        <td>Murray, Bender, Botham, Kennelly, Rodwell, Weil</td>
+      </tr>
+      <tr>
+        <td>49</td>
+        <td>ZO049</td>
+        <td>Heredity</td>
+        <td>David M. Bonner, Stanley Mill</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td>ZO050</td>
+        <td>Human Anatomy (Vol- I)</td>
+        <td>B. D. Chaurasia</td>
+      </tr>
+      <tr>
+        <td>51</td>
+        <td>ZO051</td>
+        <td>Human Anatomy (Vol- II)</td>
+        <td>B. D. Chaurasia</td>
+      </tr>
+      <tr>
+        <td>52</td>
+        <td>ZO052</td>
+        <td>Human Anatomy (Vol- III)</td>
+        <td>B. D. Chaurasia</td>
+      </tr>
+      <tr>
+        <td>53</td>
+        <td>ZO053</td>
+        <td>Human Anatomy (Vol.-IV)</td>
+        <td>B. D. Chaurasia</td>
+      </tr>
+      <tr>
+        <td>54</td>
+        <td>ZO054</td>
+        <td>Human Physiology</td>
+        <td>Lauralee Sherwood</td>
+      </tr>
+      <tr>
+        <td>55</td>
+        <td>ZO055</td>
+        <td>Human Physiology (Vol- I)</td>
+        <td>C. C. Chatterjee</td>
+      </tr>
+      <tr>
+        <td>56</td>
+        <td>ZO056</td>
+        <td>Human Physiology (Vol-II)</td>
+        <td>C. C. Chatterjee</td>
+      </tr>
+      <tr>
+        <td>57</td>
+        <td>ZO057</td>
+        <td>Human Physiology (Vol-I)</td>
+        <td>Dr. T. K. Basu</td>
+      </tr>
+      <tr>
+        <td>58</td>
+        <td>ZO058</td>
+        <td>Human Physiology (Vol-II)</td>
+        <td>Dr. T. K. Basu</td>
+      </tr>
+      <tr>
+        <td>59</td>
+        <td>ZO059</td>
+        <td>I – Genetics</td>
+        <td>Peter J. Russel</td>
+      </tr>
+      <tr>
+        <td>60</td>
+        <td>ZO060</td>
+        <td>Immunology</td>
+        <td>Janis Kuby</td>
+      </tr>
+      <tr>
+        <td>61</td>
+        <td>ZO061</td>
+        <td>Immunology II</td>
+        <td>Ashim K. Chakravarty</td>
+      </tr>
+      <tr>
+        <td>62</td>
+        <td>ZO062</td>
+        <td>Instant Notes on Biochemistry</td>
+        <td>B. D. Homes, N. M. Hooper</td>
+      </tr>
+      <tr>
+        <td>63</td>
+        <td>ZO063</td>
+        <td>Instant Notes on Immunology</td>
+        <td>P M Ladyard, A Whelan, N. M. Fanger</td>
+      </tr>
+      <tr>
+        <td>64</td>
+        <td>ZO064</td>
+        <td>Introduction to General Zoology</td>
+        <td>Chaki - Kundu- Sarkar</td>
+      </tr>
+      <tr>
+        <td>65</td>
+        <td>ZO065</td>
+        <td>Invertebrates</td>
+        <td>R. L. Kotpal</td>
+      </tr>
+      <tr>
+        <td>66</td>
+        <td>ZO066</td>
+        <td>Invertebrates Zoology</td>
+        <td>E. L. Jordan, P. S. Verma</td>
+      </tr>
+      <tr>
+        <td>67</td>
+        <td>ZO067</td>
+        <td>Invertebrates Zoology</td>
+        <td>Ruppert-Fox-Barness</td>
+      </tr>
+      <tr>
+        <td>68</td>
+        <td>ZO068</td>
+        <td>Kuby. Immunology (6th Edition)</td>
+        <td>Khdt, Goldsby, Osborne</td>
+      </tr>
+      <tr>
+        <td>69</td>
+        <td>ZO069</td>
+        <td>Lecture notes on Immunology</td>
+        <td>Gordon Reeves &amp; Jon Todd</td>
+      </tr>
+      <tr>
+        <td>70</td>
+        <td>ZO070</td>
+        <td>Marine Ecosystem - A Field Guide</td>
+        <td>Dr. Abhijit Mitra, Sabyasachi Majumdar, Swapan Kr. Das</td>
+      </tr>
+      <tr>
+        <td>71</td>
+        <td>ZO071</td>
+        <td>Medical Physiology</td>
+        <td>K. Sembulimgram, P. Sembulimgram</td>
+      </tr>
+      <tr>
+        <td>72</td>
+        <td>ZO072</td>
+        <td>Microbiology</td>
+        <td>Prescott Harley, Klein</td>
+      </tr>
+      <tr>
+        <td>73</td>
+        <td>ZO073</td>
+        <td>Microbiology</td>
+        <td>Pelczer; ECS Cham, Kreig</td>
+      </tr>
+      <tr>
+        <td>74</td>
+        <td>ZO074</td>
+        <td>Modern Approach to A Textbook of Zoology</td>
+        <td>Dr. Ashim Kr. Chatterjee</td>
+      </tr>
+      <tr>
+        <td>75</td>
+        <td>ZO075</td>
+        <td>Modern Concept of Ecology</td>
+        <td>H. D. Kumar</td>
+      </tr>
+      <tr>
+        <td>76</td>
+        <td>ZO076</td>
+        <td>Molecular Biology</td>
+        <td>David Freidfelder</td>
+      </tr>
+      <tr>
+        <td>77</td>
+        <td>ZO077</td>
+        <td>Molecular Biology of the Cell (The Problems)</td>
+        <td>Jhon Wilson, Tim Hunt</td>
+      </tr>
+      <tr>
+        <td>78</td>
+        <td>ZO078</td>
+        <td>Molecular Biology of the Gene</td>
+        <td>J. D. Watson</td>
+      </tr>
+      <tr>
+        <td>79</td>
+        <td>ZO079</td>
+        <td>Molecular Cell Biology</td>
+        <td>Ladish, Berix, Ziprusky, Darnell, Matsudaira, Ballimore</td>
+      </tr>
+      <tr>
+        <td>80</td>
+        <td>ZO080</td>
+        <td>Papers on Genetics – A Book of Reading</td>
+        <td>Louis Levine</td>
+      </tr>
+      <tr>
+        <td>81</td>
+        <td>ZO081</td>
+        <td>Parasitology</td>
+        <td>K. D. Chatterjee</td>
+      </tr>
+      <tr>
+        <td>82</td>
+        <td>ZO082</td>
+        <td>Practical Zoology</td>
+        <td>Ghosh - Manna</td>
+      </tr>
+      <tr>
+        <td>83</td>
+        <td>ZO083</td>
+        <td>Principles of Animal Taxonomy</td>
+        <td>George Gaylord, Simpson</td>
+      </tr>
+      <tr>
+        <td>84</td>
+        <td>ZO084</td>
+        <td>Principles of Genetics</td>
+        <td>Robert H. Tamarin</td>
+      </tr>
+      <tr>
+        <td>85</td>
+        <td>ZO085</td>
+        <td>Principles of Genetics</td>
+        <td>Gardner, Simmons, Snustad</td>
+      </tr>
+      <tr>
+        <td>86</td>
+        <td>ZO086</td>
+        <td>Principles of Genetics</td>
+        <td>Elden G Gardener</td>
+      </tr>
+      <tr>
+        <td>87</td>
+        <td>ZO087</td>
+        <td>Principles of Human Physiology</td>
+        <td>Sherwood</td>
+      </tr>
+      <tr>
+        <td>88</td>
+        <td>ZO088</td>
+        <td>Principles of Systematic Zoology</td>
+        <td>Ernest Mayr, Peter D Ashlock</td>
+      </tr>
+      <tr>
+        <td>89</td>
+        <td>ZO089</td>
+        <td>Review of Medical Physiology</td>
+        <td>William F. Ganong</td>
+      </tr>
+      <tr>
+        <td>90</td>
+        <td>ZO090</td>
+        <td>Review of Medical Physiology</td>
+        <td>Barret, Barman, Brook, Baitano</td>
+      </tr>
+      <tr>
+        <td>91</td>
+        <td>ZO091</td>
+        <td>Statistics In Biology and Psychology</td>
+        <td>Debajyoti Das, Arati Das</td>
+      </tr>
+      <tr>
+        <td>92</td>
+        <td>ZO092</td>
+        <td>Teach Yourself Zoology</td>
+        <td>V. Banerjee, I. K. Ghosh, G. K. Verma</td>
+      </tr>
+      <tr>
+        <td>93</td>
+        <td>ZO093</td>
+        <td>Text Book of Zoology [Vertebrates; Vol-1]</td>
+        <td>Parker – Haswell</td>
+      </tr>
+      <tr>
+        <td>94</td>
+        <td>ZO094</td>
+        <td>Text Book of Zoology [Vertebrates; Vol-2]</td>
+        <td>Parker – Haswell</td>
+      </tr>
+      <tr>
+        <td>95</td>
+        <td>ZO095</td>
+        <td>Textbook of Biochemistry for Medical Students</td>
+        <td>D M Vasudevan, Sree Kumari, Vidyanathan</td>
+      </tr>
+      <tr>
+        <td>96</td>
+        <td>ZO096</td>
+        <td>Textbook of Endocrinology</td>
+        <td>Williams, Roberts. H</td>
+      </tr>
+      <tr>
+        <td>97</td>
+        <td>ZO097</td>
+        <td>Textbook of Medical Parasitology</td>
+        <td>C K J Paniker</td>
+      </tr>
+      <tr>
+        <td>98</td>
+        <td>ZO098</td>
+        <td>Textbook of Microbiology</td>
+        <td>Ananthanarayan &amp; Paniker</td>
+      </tr>
+      <tr>
+        <td>99</td>
+        <td>ZO099</td>
+        <td>Textbook of Zoology [Invertebrates]</td>
+        <td>Marshall - Williams</td>
+      </tr>
+      <tr>
+        <td>100</td>
+        <td>ZO100</td>
+        <td>Textbook of Zoology [Vertebrates]</td>
+        <td>Marshall - Williams</td>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>ZO101</td>
+        <td>The Cell – Molecular Approach</td>
+        <td>Cooper – Hausman</td>
+      </tr>
+      <tr>
+        <td>102</td>
+        <td>ZO102</td>
+        <td>The Life of Vertebrates</td>
+        <td>J. Z. Young</td>
+      </tr>
+      <tr>
+        <td>103</td>
+        <td>ZO103</td>
+        <td>Theory and Practice of Animal Taxonomy</td>
+        <td>V. C. Kappor</td>
+      </tr>
+      <tr>
+        <td>104</td>
+        <td>ZO104</td>
+        <td>Vertebrate Zoology</td>
+        <td>Fatik Baran Mondal</td>
+      </tr>
+      <tr>
+        <td>105</td>
+        <td>ZO105</td>
+        <td>Vertebrates</td>
+        <td>R. L. Kotpal</td>
+      </tr>
+      <tr>
+        <td>106</td>
+        <td>ZO106</td>
+        <td>Vertebrates Endocrinology</td>
+        <td>David O. Norris</td>
+      </tr>
+      <tr>
+        <td>107</td>
+        <td>ZO107</td>
+        <td>Vertebrates – Comparative Anatomy, Function, Evolution</td>
+        <td>K. V. Kardong</td>
+      </tr>
+      <tr>
+        <td>108</td>
+        <td>ZO108</td>
+        <td>Zoology Practical</td>
+        <td>Ghosh – Manna</td>
+      </tr>
+    </table><br>
+    <!--------- Footer --------->
+    <footer>
+      <!--------- Back to Top --------->
+      <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top"><i
+          class="fas fa-arrow-up"></i> Back to Top</button>
+      <!--------- Copyright --------->
+      <div>
+        <p class="text-center text-light">
+          <i class="fa fa-copyright" aria-hidden="true"></i> Dakshineswar Shayak Library, 2022
+        </p>
+        <p class="text-center text-light">
+          <i class="fa fa-copyright" aria-hidden="true"></i> All rights reserved
+        </p>
+      </div>
+      <div style="background-color:black">
+        <p class="text-center text-light">
+          Designed and Developed by <a href="https://github.com/debjitpal5040">Debjit Pal</a>, <a
+            href="https://github.com/Soumabha-Banerjee">Soumabha Banerjee</a>, <a
+            href="https://github.com/airlive11">Sakshya Bhattacharya</a>
+        </p>
+      </div>
+    </footer>
+    <!--------- BootStrap JS --------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <!--------- Font Awesome JS --------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+      integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--------- JQuery --------->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!--------- External JS files --------->
+    <script src="{% static 'book.js' %}"></script>
+    <script src="{% static 'button.js' %}"></script>
+    <script src="{% static 'table.js' %}"></script>
+    <!--------- No Script --------->
+    <noscript>Please enable JavaScript in your browser to view this page</noscript>
+  </body>
+
+</html>
