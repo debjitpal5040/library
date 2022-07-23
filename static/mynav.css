@@ -8,6 +8,7 @@ nav {
     font-family: cursive;
     font-size: 22px !important;
 }
+
 .navbar-brand:hover {
     color: aqua !important;
     transition: color 0.5s;
@@ -18,9 +19,11 @@ nav {
 nav div a {
     margin-left: 2rem;
 }
+
 .nav-link{
     color:white !important;
 }
+
 .nav-link:hover {
     color: aqua !important;
     transition: color 0.5s;
@@ -56,6 +59,8 @@ nav div a {
 .btn {
     color: white !important;
     border-color: navy !important;
+    width: 80px;
+    height: 40px;
 }
 
 .img {
@@ -63,6 +68,7 @@ nav div a {
     height: 40px;
     border-radius: 10%;
 }
+
 .img:hover {
     transform: scale(1.2);
     transition: transform 0.5s;

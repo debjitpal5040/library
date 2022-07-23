@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box !important;
 }
+
 body {
   background-color: hsl(205, 80%, 34%) !important;
 }
+
 /* Position the image container (needed to position the left and right arrows) */
 .container {
   position: relative;
@@ -35,8 +37,7 @@ body {
 }
 
 /* Next & previous buttons */
-.prev,
-.next {
+.prev, .next {
   cursor: pointer;
   position: absolute;
   top: 30%;
@@ -58,8 +59,7 @@ body {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
+.prev:hover, .next:hover {
   background-color: white;
   border-radius: 90%;
 }
@@ -98,8 +98,7 @@ body {
   height: 300px;
 }
 
-.active,
-.demo:hover {
+.active, .demo:hover {
   opacity: 1;
   transform: scale(1.1);
 }
