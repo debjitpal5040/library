@@ -1,6 +1,6 @@
 # Website
 
-Welcome to the official website development repository of Dakshineswar Shayak Library. This repository is used to develop the website of the library. This is an ongoing project developed by a small subset of library members who are just college students with some knowledge in website development. This is currently a personal project and as per from the request of the senior members of our library we are developing this and we are not affiliated with any other company. We are just a bunch of college students who are working on this project to boost our local library's online presence and to make it more user friendly. We are also working on a project to make the library more accessible to everyone. 
+Welcome to the official website development repository of Dakshineswar Shayak Library. This repository is used to develop the website of the library. This is a project developed by a small subset of library members who are just college students with some knowledge in website development. This is currently a personal project and as per from the request of the senior members of our library we are developing this and we are not affiliated with any other company. We are just a bunch of college students who are working on this project to boost our local library's online presence and to make it more user friendly. We are also working on a project to make the library more accessible to everyone. 
 
     Team :- Dakshineswar Shayak Library
     Developers :- @debjitpal5040 @Soumabha-Banerjee @airlive11
@@ -11,24 +11,27 @@ Welcome to the official website development repository of Dakshineswar Shayak Li
 
 ## Homepage
 
-![Web capture_9-6-2022_145735_127 0 0 1](https://user-images.githubusercontent.com/76846542/172815023-92556fdc-de8c-415b-acab-23659c3fc6a7.jpeg)
+![Web capture_23-7-2022_135244_dakshineswar-shayak-library herokuapp com](https://user-images.githubusercontent.com/76846542/180597211-556c2971-4807-4012-8787-d342ea98e72e.jpeg)
 
 ## Books
 
-![Web capture_9-6-2022_14581_127 0 0 1](https://user-images.githubusercontent.com/76846542/172815157-05b7efcc-7269-4603-85e3-ab8051967f0d.jpeg)
+![Web capture_23-7-2022_13535_dakshineswar-shayak-library herokuapp com](https://user-images.githubusercontent.com/76846542/180597220-8c604b33-77fb-475f-9369-139d6905c971.jpeg)
 
 ## Community
 
-![Web capture_9-6-2022_145933_127 0 0 1](https://user-images.githubusercontent.com/76846542/172815188-d3e86a9f-2696-475b-9c17-695879dd5f88.jpeg)
+![Web capture_23-7-2022_135322_dakshineswar-shayak-library herokuapp com](https://user-images.githubusercontent.com/76846542/180597241-39d80f06-786e-47cb-89f1-7e895f609a90.jpeg)
 
 ## Gallery
 
-![Web capture_9-6-2022_145825_127 0 0 1](https://user-images.githubusercontent.com/76846542/172815199-a631eba8-4067-4691-bfd1-7bc3f9123b65.jpeg)
+![Web capture_23-7-2022_135348_dakshineswar-shayak-library herokuapp com](https://user-images.githubusercontent.com/76846542/180597247-1c7c7255-3e4c-4228-9b31-beb3beff403b.jpeg)
 
 ## About Us
-Design in Progress...Keep Patience 
+
+![Web capture_23-7-2022_13545_dakshineswar-shayak-library herokuapp com](https://user-images.githubusercontent.com/76846542/180597258-9a16667c-4d05-4c79-bc4c-707041c4d533.jpeg)
 
 ## Login/Register
-![Web capture_9-6-2022_145914_127 0 0 1](https://user-images.githubusercontent.com/76846542/172815316-96c1bdae-324a-4378-9b71-f3ed4455e9da.jpeg)
+![Web capture_23-7-2022_135423_dakshineswar-shayak-library herokuapp com](https://user-images.githubusercontent.com/76846542/180597265-b9a95745-dfc5-4a8e-be29-ad742cb712fe.jpeg)
+![Web capture_23-7-2022_135436_dakshineswar-shayak-library herokuapp com](https://user-images.githubusercontent.com/76846542/180597270-120ae73a-6fdc-44ca-a551-e7ed64c92181.jpeg)
+
 
 
