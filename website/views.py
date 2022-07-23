@@ -1,11 +1,7 @@
-from django.shortcuts import render, redirect
-
+from django.shortcuts import render
 
 def about(request):
     return render(request, 'about.html')
-
-def admin(request):
-    return render(request, 'admin.html')
 
 def book(request):
     return render(request, 'book.html')
