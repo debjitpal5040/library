@@ -58,26 +58,6 @@ nav div a {
     border-color: navy !important;
 }
 
-.dropdown-item:hover {
-    color: aqua !important;
-    background-color: navy !important;
-    transition: background-color 0.5s !important;
-    border-radius: 10px !important;
-    font-size: 15px !important;
-    transition: color 0.5s;
-    transform: scale(1.2);
-    transition: transform 0.5s;
-    text-align: center;
-}
-
-.dropdown-item {
-    width: 90px !important;
-    text-align: center;
-    color: white !important;
-}
-#navbarDropdown{
-    color: white;
-}
 .img {
     width: 40px;
     height: 40px;
