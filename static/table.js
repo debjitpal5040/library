@@ -1,23 +1,26 @@
 //When the option is changed
 var changeSelection = function () {
   //Hide all of the elements
-hideAll();
+  hideAll();
   //If the select value is > 0 (is valid)
-if (document.getElementById("select").value > 0) {
+  if (document.getElementById("select").value > 0) {
     //Set the element display to "block" (block is typically the default display type)
-    document.getElementById("t" + document.getElementById("select").value).style.display = "block"; }
+    document.getElementById("t" + document.getElementById("select").value).style.display = "block";
+  }
 };
 //Function to hide all of the elements
 var hideAll = function () {
   //Loop through the elements
-for (var i = 1; i <= 6; i++) {
+  for (var i = 1; i <= 6; i++) {
     //Hide each one
-    document.getElementById("t" + i).style.display = "none"; }
+    document.getElementById("t" + i).style.display = "none";
+  }
 };
 //This function automaticaly executes when the page is loaded
-(function() {
+(function () {
   //Hide all of the elements
-hideAll();}
+  hideAll();
+}
 )();
 
 // Search function
@@ -27,30 +30,30 @@ var $rows3 = $('#t3 tr');
 var $rows4 = $('#t4 tr');
 var $rows5 = $('#t5 tr');
 var $rows6 = $('#t6 tr');
-$('#search').keyup(function() {
+$('#search').keyup(function () {
   var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
-  $rows1.show().filter(function() {
-      var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-      return !~text.indexOf(val);
+  $rows1.show().filter(function () {
+    var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+    return !~text.indexOf(val);
   }).hide();
-  $rows2.show().filter(function() {
+  $rows2.show().filter(function () {
     var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
     return !~text.indexOf(val);
-}).hide();
-  $rows3.show().filter(function() {
+  }).hide();
+  $rows3.show().filter(function () {
     var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
     return !~text.indexOf(val);
-}).hide();
-  $rows4.show().filter(function() {
-  var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-  return !~text.indexOf(val);
-}).hide();
-  $rows5.show().filter(function() {
-  var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-  return !~text.indexOf(val);
-}).hide();
-  $rows6.show().filter(function() {
-  var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-  return !~text.indexOf(val);
-}).hide();
+  }).hide();
+  $rows4.show().filter(function () {
+    var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+    return !~text.indexOf(val);
+  }).hide();
+  $rows5.show().filter(function () {
+    var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+    return !~text.indexOf(val);
+  }).hide();
+  $rows6.show().filter(function () {
+    var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+    return !~text.indexOf(val);
+  }).hide();
 });

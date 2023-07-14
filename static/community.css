@@ -2,14 +2,14 @@ body {
     background-color: hsl(205, 80%, 34%) !important;
 }
 
-.notice{
+.notice {
     text-align: center;
     color: black;
     margin: 30px;
     font-family: cursive;
 }
 
-.notice:hover{
+.notice:hover {
     color: white;
     cursor: pointer;
     transition: color 0.5s;
@@ -17,7 +17,7 @@ body {
     transition: transform 0.5s;
 }
 
-#not{
+#not {
     width: 400px;
     height: 500px;
     cursor: pointer;
@@ -25,24 +25,24 @@ body {
     margin-bottom: 10px;
 }
 
-#not:hover{
+#not:hover {
     opacity: 0.8;
     transform: scale(1.1);
     transition: transform 0.5s;
 }
 
-.form{
+.form {
     text-align: center;
 }
 
-.contact{
+.contact {
     text-align: center;
     color: black;
     margin: 30px;
     font-family: cursive;
 }
 
-.contact:hover{
+.contact:hover {
     color: white;
     cursor: pointer;
     transition: color 0.5s;
@@ -51,23 +51,26 @@ body {
 }
 
 /* Form */
-label{
+label {
     color: white;
     display: inline-block;
     text-align: right;
     width: 100px;
 }
 
-label[for="message"]{
+label[for="message"] {
     margin-left: 100px;
 }
 
-label[for="query"]{
+label[for="query"] {
     margin-left: 10px;
 }
 
-input[type = text],[type = email], [type = tel], select {
-    background-color:black; 
+input[type=text],
+[type=email],
+[type=tel],
+select {
+    background-color: black;
     width: 18%;
     padding: 5px;
     margin-left: 10px;
@@ -75,8 +78,8 @@ input[type = text],[type = email], [type = tel], select {
     color: white;
 }
 
-textarea{
-    background-color:black;
+textarea {
+    background-color: black;
     width: 25%;
     height: 130px;
     padding: 7px;
@@ -86,7 +89,9 @@ textarea{
     resize: horizontal;
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
     background-color: navy;
 }
 
@@ -105,8 +110,8 @@ input[type=reset]:hover {
 }
 
 input[type=submit] {
-    padding:10px 8px; 
-    background-color: green; 
+    padding: 10px 8px;
+    background-color: green;
     color: white;
     border-radius: 10%;
     cursor: pointer;

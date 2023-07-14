@@ -1,11 +1,11 @@
-.d-block{
+.d-block {
     height: 620px;
 }
 
-.carousel-caption{
+.carousel-caption {
     opacity: 0.8;
-    color:white; 
-    background-color:navy; 
+    color: white;
+    background-color: navy;
     border-radius: 20px;
 }
 

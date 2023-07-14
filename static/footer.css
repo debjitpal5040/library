@@ -1,7 +1,7 @@
 .footer {
     padding-top: 20px;
     padding-bottom: 10px;
-    background-color:hsl(205, 80%, 34%);
+    background-color: hsl(205, 80%, 34%);
 }
 
 .col-md-3 {
@@ -17,7 +17,7 @@ a:link {
     text-decoration: none;
 }
 
-a:link:hover{
+a:link:hover {
     color: aqua;
 }
 
@@ -27,12 +27,12 @@ a:link:hover{
     margin-bottom: 20px;
 }
 
-.imag{
+.imag {
     height: 50px;
     width: 50px;
 }
 
-.imag:hover{
+.imag:hover {
     transform: scale(1.1);
     transition: transform 0.5s;
 }
